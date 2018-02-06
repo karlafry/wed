@@ -1,0 +1,895 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Karla");
+/* line 5, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 22, ../sass/_layout.scss */
+.onecol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 5.71429%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 22, ../sass/_layout.scss */
+  .onecol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 30, ../sass/_layout.scss */
+.twocol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 14.28571%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 30, ../sass/_layout.scss */
+  .twocol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 38, ../sass/_layout.scss */
+.threecol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 22.85714%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 38, ../sass/_layout.scss */
+  .threecol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 46, ../sass/_layout.scss */
+.fourcol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 31.42857%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 46, ../sass/_layout.scss */
+  .fourcol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 54, ../sass/_layout.scss */
+.fivecol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 40%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 54, ../sass/_layout.scss */
+  .fivecol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 62, ../sass/_layout.scss */
+.sixcol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 48.57143%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 62, ../sass/_layout.scss */
+  .sixcol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 70, ../sass/_layout.scss */
+.sevencol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 57.14286%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 70, ../sass/_layout.scss */
+  .sevencol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 78, ../sass/_layout.scss */
+.eightcol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 65.71429%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 78, ../sass/_layout.scss */
+  .eightcol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 86, ../sass/_layout.scss */
+.ninecol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 74.28571%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 86, ../sass/_layout.scss */
+  .ninecol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 94, ../sass/_layout.scss */
+.tencol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 82.85714%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 94, ../sass/_layout.scss */
+  .tencol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 102, ../sass/_layout.scss */
+.elevencol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 91.42857%;
+  float: left;
+  margin-right: 2.85714%;
+}
+@media (max-width: 61.25em) {
+  /* line 102, ../sass/_layout.scss */
+  .elevencol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 110, ../sass/_layout.scss */
+.twelvecol {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 61.25em) {
+  /* line 110, ../sass/_layout.scss */
+  .twelvecol {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 118, ../sass/_layout.scss */
+.last {
+  margin-right: 0;
+}
+
+/**
+ * Reusable mixins.
+ */
+/*From https://gist.github.com/adamstac/5048881*/
+/* Vertical Rhythm : establish-baseline - http://compass-style.org/reference/compass/typography/vertical_rhythm/ */
+/* Vertical Rhythm : adjust-font-size - http://compass-style.org/reference/compass/typography/vertical_rhythm/ */
+/* Vertical Rhythm : margin-trailer - http://compass-style.org/reference/compass/typography/vertical_rhythm/ */
+/*This updated version from http://webaim.org/techniques/css/invisiblecontent/*/
+@font-face {
+  font-family: 'springTime';
+  src: url("../fonts/springtime_webfont.woff2") format("woff2"), url("../fonts/springtime_webfont.woff") format("woff"), url("../fonts/springtime_webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'AutumnInNovember';
+  src: url("../fonts/autumn_in_november_webfont.woff2") format("woff2"), url("../fonts/autumn_in_november_webfont.woff") format("woff"), url("../fonts/autumn_in_november_webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'liebeerika_regularregular';
+  src: url("../fonts/liebeerika-regular-webfont.woff2") format("woff2"), url("../fonts/liebeerika-regular-webfont.woff") format("woff"), url("../fonts/liebeerika-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 108, ../sass/_mixins.scss */
+html {
+  font-size: 100%;
+  line-height: 1.75em;
+}
+
+/* line 52, ../sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 18px;
+  margin-bottom: 1.09375rem;
+  margin-top: 0;
+  color: #f2fac5;
+}
+
+/* line 59, ../sass/_typography.scss */
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 56px;
+  line-height: 3.5rem;
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+  font-family: "liebeerika_regularregular";
+}
+
+/* line 65, ../sass/_typography.scss */
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 42px;
+  line-height: 2.625rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.3125rem;
+  font-family: "liebeerika_regularregular";
+}
+
+/* line 71, ../sass/_typography.scss */
+a, a:visited {
+  text-decoration: none;
+  color: #6b1310;
+  outline: none;
+}
+/* line 76, ../sass/_typography.scss */
+a:hover, a:visited:hover {
+  text-decoration: underline;
+}
+/* line 80, ../sass/_typography.scss */
+a.btn, a:visited.btn {
+  color: #6b1310;
+}
+/* line 83, ../sass/_typography.scss */
+a.btn:hover, a:visited.btn:hover {
+  color: #FFF;
+}
+
+/* line 89, ../sass/_typography.scss */
+p, li {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 18px;
+  margin-bottom: 1.09375rem;
+  font-weight: 300;
+}
+
+/* line 95, ../sass/_typography.scss */
+sup,
+sub {
+  font-size: 0.6em;
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  _vertical-align: bottom;
+  position: relative;
+}
+
+/* line 104, ../sass/_typography.scss */
+sup {
+  bottom: 0.75em;
+}
+
+/* line 107, ../sass/_typography.scss */
+sub {
+  top: 0.5em;
+}
+
+/* Slider */
+/* line 31, ../sass/_slick.scss */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 46, ../sass/_slick.scss */
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 53, ../sass/_slick.scss */
+.slick-list:focus {
+  outline: none;
+}
+/* line 57, ../sass/_slick.scss */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 63, ../sass/_slick.scss */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 72, ../sass/_slick.scss */
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+}
+/* line 78, ../sass/_slick.scss */
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+/* line 84, ../sass/_slick.scss */
+.slick-track:after {
+  clear: both;
+}
+/* line 88, ../sass/_slick.scss */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 93, ../sass/_slick.scss */
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+/* line 97, ../sass/_slick.scss */
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+/* line 100, ../sass/_slick.scss */
+.slick-slide img {
+  display: block;
+  width: 100%;
+}
+/* line 104, ../sass/_slick.scss */
+.slick-slide.slick-loading img {
+  display: none;
+}
+/* line 110, ../sass/_slick.scss */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+/* line 114, ../sass/_slick.scss */
+.slick-initialized .slick-slide {
+  display: block;
+}
+/* line 118, ../sass/_slick.scss */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+/* line 122, ../sass/_slick.scss */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 129, ../sass/_slick.scss */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* line 135, ../sass/_slick.scss */
+.slick-loading .slick-list {
+  background: #fff url('/images/ajax-loader.gif?1505214494') center center no-repeat;
+}
+
+/* Arrows */
+/* line 141, ../sass/_slick.scss */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 50px;
+  width: 50px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: #6b1310;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+/* line 161, ../sass/_slick.scss */
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+}
+/* line 165, ../sass/_slick.scss */
+.slick-prev:before,
+.slick-next:before {
+  font-family: "FontAwesome";
+  font-size: 48px;
+  line-height: 1;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 175, ../sass/_slick.scss */
+.slick-prev {
+  left: 0px;
+}
+/* line 177, ../sass/_slick.scss */
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: 0px;
+}
+/* line 181, ../sass/_slick.scss */
+.slick-prev:before {
+  content: "";
+}
+/* line 183, ../sass/_slick.scss */
+[dir="rtl"] .slick-prev:before {
+  content: "";
+}
+
+/* line 189, ../sass/_slick.scss */
+.slick-next {
+  right: 0px;
+}
+/* line 191, ../sass/_slick.scss */
+[dir="rtl"] .slick-next {
+  left: 0px;
+  right: auto;
+}
+/* line 195, ../sass/_slick.scss */
+.slick-next:before {
+  content: "";
+}
+/* line 197, ../sass/_slick.scss */
+[dir="rtl"] .slick-next:before {
+  content: "";
+}
+
+/* Dots */
+/* line 204, ../sass/_slick.scss */
+.main ul.slick-dots {
+  position: absolute;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  bottom: 5px;
+}
+/* line 214, ../sass/_slick.scss */
+.main ul.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+/* line 223, ../sass/_slick.scss */
+.main ul.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+/* line 235, ../sass/_slick.scss */
+.main ul.slick-dots li button:hover, .main ul.slick-dots li button:focus {
+  outline: none;
+}
+/* line 238, ../sass/_slick.scss */
+.main ul.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 20px;
+  height: 20px;
+  font-family: "FontAwesome";
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #6b1310;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 254, ../sass/_slick.scss */
+.main ul.slick-dots li.slick-active button:before {
+  content: "";
+  color: #c76e64;
+  font-size: 18px;
+}
+
+/* line 3, ../sass/style.scss */
+html {
+  width: 100%;
+}
+
+/* line 7, ../sass/style.scss */
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  color: #f2fac5;
+  background: url("../images/wood-bg.jpg") no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (max-width: 40em) {
+  /* line 18, ../sass/style.scss */
+  html, body {
+    -webkit-text-size-adjust: none;
+  }
+}
+/* line 23, ../sass/style.scss */
+#wrapper {
+  background: rgba(23, 15, 9, 0.75);
+}
+
+/* line 27, ../sass/style.scss */
+.inner-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+/* line 38, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.inner-wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 35, ../sass/style.scss */
+.main ul, .main ol {
+  list-style: disc;
+  list-style-position: outside;
+  margin: 0 0 28px;
+  margin: 0 0 1.75rem;
+  padding: 0 0 0 20px;
+}
+/* line 42, ../sass/style.scss */
+.main ol {
+  list-style: decimal;
+}
+/* line 46, ../sass/style.scss */
+.main > .row {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 49, ../sass/style.scss */
+.main > .row.content {
+  padding: 28px;
+  padding: 1.75rem;
+}
+
+/* line 55, ../sass/style.scss */
+a img {
+  border: none;
+}
+
+/* line 59, ../sass/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 63, ../sass/style.scss */
+.fr {
+  float: right;
+}
+
+/* line 67, ../sass/style.scss */
+.fl {
+  float: left;
+}
+
+/* line 71, ../sass/style.scss */
+.center {
+  text-align: center;
+}
+
+/* line 75, ../sass/style.scss */
+hr {
+  border: none;
+  background: #AEAEAE;
+  height: 1px;
+  margin: 28px 0;
+  margin: 1.75rem 0;
+}
+
+/*********** SLIDER *************/
+/* line 84, ../sass/style.scss */
+section.slider-container {
+  position: relative;
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+}
+/* line 88, ../sass/style.scss */
+section.slider-container .slider {
+  height: 0;
+  padding-bottom: 37.5%;
+}
+/* line 92, ../sass/style.scss */
+section.slider-container .slider:not(.slick-initialized) {
+  overflow: hidden;
+}
+/* line 96, ../sass/style.scss */
+section.slider-container .slider figure {
+  position: relative;
+  padding-bottom: 37.5%;
+  height: 0;
+  overflow: hidden;
+}
+/* line 27, ../sass/_mixins.scss */
+section.slider-container .slider figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/* line 99, ../sass/style.scss */
+section.slider-container .slider figure figcaption {
+  padding: 28px;
+  padding: 1.75rem;
+  position: absolute;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  max-width: 580px;
+  left: 0;
+  right: 0;
+  top: 20%;
+  -webkit-transform: translate(0, -20%);
+  -moz-transform: translate(0, -20%);
+  -ms-transform: translate(0, -20%);
+  -o-transform: translate(0, -20%);
+  transform: translate(0, -20%);
+  text-align: center;
+  font-family: "springTime";
+  font-size: 60px;
+  line-height: 84px;
+  line-height: 5.25rem;
+  color: #6b1310;
+}
+/* line 120, ../sass/style.scss */
+section.slider-container .slider figure figcaption span {
+  font-family: "AutumnInNovember";
+  font-size: 54px;
+  margin: -8px 0;
+  display: inline-block;
+}
+@media (max-width: 61.25em) {
+  /* line 99, ../sass/style.scss */
+  section.slider-container .slider figure figcaption {
+    font-size: 48px;
+    line-height: 56px;
+    line-height: 3.5rem;
+  }
+  /* line 130, ../sass/style.scss */
+  section.slider-container .slider figure figcaption span {
+    font-size: 40px;
+  }
+}
+@media (max-width: 40em) {
+  /* line 99, ../sass/style.scss */
+  section.slider-container .slider figure figcaption {
+    padding: 14px;
+    padding: 0.875rem;
+    font-size: 28px;
+    line-height: 42px;
+    line-height: 2.625rem;
+  }
+  /* line 140, ../sass/style.scss */
+  section.slider-container .slider figure figcaption span {
+    font-size: 24px;
+  }
+}

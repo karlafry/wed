@@ -1,0 +1,120 @@
+$susy: (
+        columns: 12,
+        gutters: 1/2,
+        math: fluid,
+        output: float,
+        gutter-position: after,
+        box-sizing: border-box
+);
+
+$breakpoints: (
+        phone: 30em,                /* 480px */
+        phone-ls: 40em,             /* 640px */
+        tablet: 48em,               /* 768px */
+        tablet-gt: 48.0625em,       /* 769px as >tablet = 48.01 which doesnt work */
+        desktop: 64em,              /* 1024px */
+        desktop-smaller: 61.25em,   /* 980px */
+        desktop-larger: 75em,       /* 1200px */
+);
+
+@include border-box-sizing;
+
+.onecol {
+  @include span(1);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.twocol {
+  @include span(2);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.threecol {
+  @include span(3);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.fourcol {
+  @include span(4);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.fivecol {
+  @include span(5);
+
+  @include media("<=desktop-smaller") /* < 480px */ {
+    @include span(12);
+  }
+}
+
+.sixcol {
+  @include span(6);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.sevencol {
+  @include span(7);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.eightcol {
+  @include span(8);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.ninecol {
+  @include span(9);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.tencol {
+  @include span(10);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.elevencol {
+  @include span(11);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.twelvecol {
+  @include span(12);
+
+  @include media("<=desktop-smaller") /* <= 980px */ {
+    @include span(12);
+  }
+}
+
+.last {
+  margin-right: 0;
+}

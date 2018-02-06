@@ -1,0 +1,24 @@
+{
+  "name": "sean-karla-wedding",
+  "version": "0.0.0",
+  "authors": [
+    "Karla Fry <hello@karlafry.com>"
+  ],
+  "license": "proprietary",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "html5shiv": "~3.7.2",
+    "include-media": "~1.4.1",
+    "susy": "~2.2.5",
+    "sass-rem": "~1.2.1",
+    "enquire": "~2.1.2",
+    "media-match": "~2.0.2"
+  }
+}

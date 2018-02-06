@@ -1,0 +1,147 @@
+@import "base";
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $base-font-size;
+    color: $copy;
+    background: url("../images/wood-bg.jpg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@include media("<=phone-ls") /* 640px */
+{
+    html, body {
+        -webkit-text-size-adjust: none;
+    }
+}
+
+#wrapper {
+    background: rgba(23, 15, 9, 0.75);
+}
+
+.inner-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include pie-clearfix;
+}
+
+.main {
+    ul, ol {
+        list-style: disc;
+        list-style-position: outside;
+        @include rem(margin, 0 0 rhythm(1));
+        padding: 0 0 0 20px;
+    }
+
+    ol {
+        list-style: decimal;
+    }
+
+    > .row {
+        @include clearfix;
+
+        &.content {
+            @include rem(padding, rhythm(1));
+        }
+    }
+}
+
+a img {
+    border: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+hr {
+    border: none;
+    background: $light-grey;
+    height: 1px;
+    @include rem(margin, rhythm(1) 0);
+
+}
+
+/*********** SLIDER *************/
+section.slider-container {
+    position: relative;
+    @include rem(margin-bottom, rhythm(1));
+
+    .slider {
+        height: 0;
+        padding-bottom: (3/8) * 100%;
+
+        &:not(.slick-initialized) {
+            overflow: hidden;
+        }
+
+        figure {
+            @include aspect-ratio-img(8, 3);
+
+            figcaption {
+                @include rem(padding, rhythm(1));
+                position: absolute;
+                margin: auto;
+                background: rgba(#fff,0.5);
+                width: 80%;
+                max-width: 580px;
+                left: 0;
+                right: 0;
+                top: 20%;
+                -webkit-transform: translate(0, -20%);
+                -moz-transform: translate(0, -20%);
+                -ms-transform: translate(0, -20%);
+                -o-transform: translate(0, -20%);
+                transform: translate(0, -20%);
+                text-align: center;
+                font-family: $banner-font-family;
+                font-size: $alpha;
+                @include rem(line-height, rhythm(3));
+                color: $primary;
+
+                span {
+                    font-family: $banner-alt-font-family;
+                    font-size: 54px;
+                    margin: -8px 0;
+                    display: inline-block;
+                }
+
+                @include media("<=desktop-smaller") {
+                    font-size: $beta;
+                    @include rem(line-height, rhythm(2));
+                    span {
+                        font-size: 40px;
+                    }
+                }
+
+                @include media("<=phone-ls") {
+                    @include rem(padding, rhythm(0.5));
+                    font-size: $delta;
+                    @include rem(line-height, rhythm(1.5));
+
+                    span {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'springTime';
+  src: url('../fonts/springtime_webfont.woff2') format('woff2'),
+  url('../fonts/springtime_webfont.woff') format('woff'),
+  url('../fonts/springtime_webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AutumnInNovember';
+  src: url('../fonts/autumn_in_november_webfont.woff2') format('woff2'),
+  url('../fonts/autumn_in_november_webfont.woff') format('woff'),
+  url('../fonts/autumn_in_november_webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'liebeerika_regularregular';
+  src: url('../fonts/liebeerika-regular-webfont.woff2') format('woff2'),
+  url('../fonts/liebeerika-regular-webfont.woff') format('woff'),
+  url('../fonts/liebeerika-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+$banner-font-family: 'springTime';
+$banner-alt-font-family: 'AutumnInNovember';
+$header-font-family: 'liebeerika_regularregular';
+$font-family: 'Karla', sans-serif;
+
+$base-font-size: 16px;
+$base-line-height: 28px;
+$round-to-nearest-half-line: true;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: true;
+
+$alpha: 60px;
+$beta: 48px;
+$gamma: 36px;
+$delta: 28px;
+$epsilon: 21px;
+$zeta: 18px;
+$eta: 14px;
+$theta: 12px;
+
+@include establish-baseline;
+
+h1, h2, h3, h4, h5, h6{
+  @include font-smoothing;
+  @include margin-trailer;
+  margin-top: 0;
+  color: $copy;
+}
+
+h1 {
+  @include adjust-font-size-to($beta);
+  @include rem(margin-bottom, rhythm(1));
+  font-family: $header-font-family;
+}
+
+h2 {
+  @include adjust-font-size-to($gamma);
+  @include rem(margin-bottom, rhythm(0.75));
+  font-family: $header-font-family;
+}
+
+a , a:visited {
+  text-decoration: none;
+  color: $primary;
+  outline: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.btn {
+    color: $primary;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+p, li{
+  @include font-smoothing;
+  @include margin-trailer;
+  font-weight: 300;
+}
+
+sup,
+sub {
+  font-size: 0.6em;
+  height: 0;
+  line-height: 1;
+  vertical-align: baseline;
+  _vertical-align: bottom;
+  position: relative;
+}
+sup {
+  bottom: 0.75em;
+}
+sub {
+  top: 0.5em;
+}
+
