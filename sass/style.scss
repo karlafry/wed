@@ -13,8 +13,7 @@ body {
     background-size: cover;
 }
 
-@include media("<=phone-ls") /* 640px */
-{
+@include media("<=phone-ls") {
     html, body {
         -webkit-text-size-adjust: none;
     }
@@ -87,7 +86,7 @@ section.slider-container {
     position: relative;
     @include rem(margin-bottom, rhythm(1));
 
-    .slider {
+    .main-banner {
         height: 0;
         padding-bottom: (3/8) * 100%;
 
@@ -161,6 +160,13 @@ section.slider-container {
                     }
                 }
             }
+        }
+    }
+
+    .carousel {
+
+        div.slick-slide {
+        //    @include aspect-ratio-img(1,1);
         }
     }
 }
