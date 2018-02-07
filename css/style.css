@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Karla");
-/* line 5, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -22,50 +22,50 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
-/* line 21, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, ../../../../../../var/lib/gems/1.9.1/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -368,7 +368,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: normal;
   font-style: normal;
 }
-/* line 108, ../sass/_mixins.scss */
+/* line 135, ../sass/_mixins.scss */
 html {
   font-size: 100%;
   line-height: 1.75em;
@@ -381,11 +381,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 18px;
   margin-bottom: 1.09375rem;
   margin-top: 0;
-  color: #f2fac5;
+  color: #f6eadb;
 }
 
 /* line 59, ../sass/_typography.scss */
 h1 {
+  font-size: 60px;
+  font-size: 3.75rem;
+  line-height: 70px;
+  line-height: 4.375rem;
+  margin-bottom: 42px;
+  margin-bottom: 2.625rem;
+  font-family: "liebeerika_regularregular";
+}
+
+/* line 65, ../sass/_typography.scss */
+h2 {
   font-size: 48px;
   font-size: 3rem;
   line-height: 56px;
@@ -395,37 +406,37 @@ h1 {
   font-family: "liebeerika_regularregular";
 }
 
-/* line 65, ../sass/_typography.scss */
-h2 {
+/* line 71, ../sass/_typography.scss */
+h3 {
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 42px;
   line-height: 2.625rem;
-  margin-bottom: 21px;
-  margin-bottom: 1.3125rem;
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
   font-family: "liebeerika_regularregular";
 }
 
-/* line 71, ../sass/_typography.scss */
+/* line 77, ../sass/_typography.scss */
 a, a:visited {
   text-decoration: none;
-  color: #6b1310;
+  color: #550202;
   outline: none;
 }
-/* line 76, ../sass/_typography.scss */
+/* line 82, ../sass/_typography.scss */
 a:hover, a:visited:hover {
   text-decoration: underline;
 }
-/* line 80, ../sass/_typography.scss */
+/* line 86, ../sass/_typography.scss */
 a.btn, a:visited.btn {
-  color: #6b1310;
+  color: #550202;
 }
-/* line 83, ../sass/_typography.scss */
+/* line 89, ../sass/_typography.scss */
 a.btn:hover, a:visited.btn:hover {
   color: #FFF;
 }
 
-/* line 89, ../sass/_typography.scss */
+/* line 95, ../sass/_typography.scss */
 p, li {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -434,7 +445,7 @@ p, li {
   font-weight: 300;
 }
 
-/* line 95, ../sass/_typography.scss */
+/* line 101, ../sass/_typography.scss */
 sup,
 sub {
   font-size: 0.6em;
@@ -445,12 +456,12 @@ sub {
   position: relative;
 }
 
-/* line 104, ../sass/_typography.scss */
+/* line 110, ../sass/_typography.scss */
 sup {
   bottom: 0.75em;
 }
 
-/* line 107, ../sass/_typography.scss */
+/* line 113, ../sass/_typography.scss */
 sub {
   top: 0.5em;
 }
@@ -568,7 +579,7 @@ sub {
 /* Slider */
 /* line 135, ../sass/_slick.scss */
 .slick-loading .slick-list {
-  background: #fff url('/images/ajax-loader.gif?1505214494') center center no-repeat;
+  background: #fff url('/images/ajax-loader.gif?1517992599') center center no-repeat;
 }
 
 /* Arrows */
@@ -582,7 +593,7 @@ sub {
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
-  background: #6b1310;
+  background: #550202;
   color: transparent;
   top: 50%;
   -webkit-transform: translate(0, -50%);
@@ -609,45 +620,58 @@ sub {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@media (max-width: 48em) {
+  /* line 141, ../sass/_slick.scss */
+  .slick-prev,
+  .slick-next {
+    height: 28px;
+    width: 28px;
+  }
+  /* line 178, ../sass/_slick.scss */
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 26px;
+  }
+}
 
-/* line 175, ../sass/_slick.scss */
+/* line 184, ../sass/_slick.scss */
 .slick-prev {
   left: 0px;
 }
-/* line 177, ../sass/_slick.scss */
+/* line 186, ../sass/_slick.scss */
 [dir="rtl"] .slick-prev {
   left: auto;
   right: 0px;
 }
-/* line 181, ../sass/_slick.scss */
+/* line 190, ../sass/_slick.scss */
 .slick-prev:before {
   content: "";
 }
-/* line 183, ../sass/_slick.scss */
+/* line 192, ../sass/_slick.scss */
 [dir="rtl"] .slick-prev:before {
   content: "";
 }
 
-/* line 189, ../sass/_slick.scss */
+/* line 198, ../sass/_slick.scss */
 .slick-next {
   right: 0px;
 }
-/* line 191, ../sass/_slick.scss */
+/* line 200, ../sass/_slick.scss */
 [dir="rtl"] .slick-next {
   left: 0px;
   right: auto;
 }
-/* line 195, ../sass/_slick.scss */
+/* line 204, ../sass/_slick.scss */
 .slick-next:before {
   content: "";
 }
-/* line 197, ../sass/_slick.scss */
+/* line 206, ../sass/_slick.scss */
 [dir="rtl"] .slick-next:before {
   content: "";
 }
 
 /* Dots */
-/* line 204, ../sass/_slick.scss */
+/* line 213, ../sass/_slick.scss */
 .main ul.slick-dots {
   position: absolute;
   list-style: none;
@@ -658,7 +682,7 @@ sub {
   width: 100%;
   bottom: 5px;
 }
-/* line 214, ../sass/_slick.scss */
+/* line 223, ../sass/_slick.scss */
 .main ul.slick-dots li {
   position: relative;
   display: inline-block;
@@ -668,7 +692,7 @@ sub {
   padding: 0;
   cursor: pointer;
 }
-/* line 223, ../sass/_slick.scss */
+/* line 232, ../sass/_slick.scss */
 .main ul.slick-dots li button {
   border: 0;
   background: transparent;
@@ -682,11 +706,11 @@ sub {
   padding: 5px;
   cursor: pointer;
 }
-/* line 235, ../sass/_slick.scss */
+/* line 244, ../sass/_slick.scss */
 .main ul.slick-dots li button:hover, .main ul.slick-dots li button:focus {
   outline: none;
 }
-/* line 238, ../sass/_slick.scss */
+/* line 247, ../sass/_slick.scss */
 .main ul.slick-dots li button:before {
   position: absolute;
   top: 0;
@@ -698,15 +722,731 @@ sub {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
-  color: #6b1310;
+  color: #550202;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 254, ../sass/_slick.scss */
+/* line 263, ../sass/_slick.scss */
 .main ul.slick-dots li.slick-active button:before {
   content: "";
-  color: #c76e64;
+  color: #dbaeae;
   font-size: 18px;
+}
+@media (max-width: 48em) {
+  /* line 213, ../sass/_slick.scss */
+  .main ul.slick-dots {
+    bottom: 0;
+  }
+  /* line 273, ../sass/_slick.scss */
+  .main ul.slick-dots li {
+    height: 15px;
+    width: 15px;
+  }
+  /* line 277, ../sass/_slick.scss */
+  .main ul.slick-dots li button {
+    height: 15px;
+    width: 15px;
+    padding: 2px;
+  }
+  /* line 282, ../sass/_slick.scss */
+  .main ul.slick-dots li button:before {
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    font-size: 9px;
+  }
+  /* line 290, ../sass/_slick.scss */
+  .main ul.slick-dots li.slick-active button:before {
+    font-size: 12px;
+  }
+}
+
+/* Reset */
+/* line 3, ../sass/_flipclock.scss */
+.flip-clock-wrapper * {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 11, ../sass/_flipclock.scss */
+.flip-clock-wrapper a {
+  cursor: pointer;
+  pointer-events: none;
+  text-decoration: none;
+  color: #f6eadb;
+}
+
+/* line 18, ../sass/_flipclock.scss */
+.flip-clock-wrapper.clearfix:before,
+.flip-clock-wrapper.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 24, ../sass/_flipclock.scss */
+.flip-clock-wrapper.clearfix:after {
+  clear: both;
+}
+
+/* line 28, ../sass/_flipclock.scss */
+.flip-clock-wrapper.clearfix {
+  *zoom: 1;
+}
+
+/* Main */
+/* line 33, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper {
+  margin: 56px 0;
+  margin: 3.5rem 0;
+  font: normal 20px "Karla", sans-serif;
+  -webkit-user-select: none;
+  text-align: center;
+  position: relative;
+}
+/* line 40, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper:after, .content .flip-clock-wrapper:before {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 45, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper:after {
+  clear: both;
+}
+@media (max-width: 48em) and (min-width: 30.01em) {
+  /* line 33, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper {
+    zoom: 0.8;
+  }
+}
+
+@media (max-width: 30em) {
+  /* line 33, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper {
+    zoom: 0.6;
+  }
+}
+/* line 57, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul {
+  position: relative;
+  float: left;
+  margin: 5px;
+  padding: 0;
+  width: 60px;
+  height: 90px;
+  font-weight: bold;
+  border-radius: 6px;
+  background: #550202;
+  box-shadow: 0 2px 5px rgba(16, 16, 16, 0.5);
+  list-style: none;
+}
+@media (max-width: 48em) {
+  /* line 57, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul {
+    margin-bottom: 56px;
+    margin-bottom: 3.5rem;
+  }
+}
+@media (max-width: 30em) {
+  /* line 57, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul {
+    margin: 2px 2px 42px;
+    margin: 0.125rem 0.125rem 2.625rem;
+  }
+}
+/* line 78, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 87px;
+}
+@media (max-width: 48em) and (min-width: 30.01em) {
+  /* line 78, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li {
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 30em) {
+  /* line 78, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li {
+    line-height: 40px;
+  }
+}
+/* line 95, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li:first-child {
+  z-index: 2;
+}
+/* line 99, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a {
+  display: block;
+  height: 100%;
+  -moz-perspective: 200px;
+  -webkit-perspective: 200px;
+  perspective: 200px;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+/* line 106, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+/* line 114, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+/* line 121, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div div.inn {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 200%;
+  color: #f6eadb;
+  text-shadow: 0 1px 2px #000;
+  text-align: center;
+  background-color: #550202;
+  border-radius: 6px;
+  font-size: 70px;
+}
+@media (max-width: 48em) and (min-width: 30.01em) {
+  /* line 121, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li a div div.inn {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 30em) {
+  /* line 121, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li a div div.inn {
+    font-size: 38px;
+  }
+}
+/* line 143, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div.up {
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  top: 0;
+}
+/* line 147, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div.up:after {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(16, 16, 16, 0.2);
+}
+/* line 158, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div.up div.inn {
+  top: 0;
+}
+@media (max-width: 48em) and (min-width: 30.01em) {
+  /* line 158, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li a div.up div.inn {
+    padding-top: 3px;
+  }
+}
+
+@media (max-width: 30em) {
+  /* line 158, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li a div.up div.inn {
+    padding-top: 8px;
+  }
+}
+/* line 171, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div.down {
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  bottom: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+/* line 177, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul li a div.down div.inn {
+  bottom: 0;
+}
+@media (max-width: 48em) and (min-width: 30.01em) {
+  /* line 177, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li a div.down div.inn {
+    bottom: -3px;
+  }
+}
+
+@media (max-width: 30em) {
+  /* line 177, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper ul li a div.down div.inn {
+    bottom: -8px;
+  }
+}
+/* line 194, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul.play li.flip-clock-before {
+  z-index: 3;
+}
+/* line 198, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper ul.play li.flip-clock-active {
+  -moz-animation: asd 0.5s 0.5s linear both;
+  -webkit-animation: asd 0.5s 0.5s linear both;
+  animation: asd 0.5s 0.5s linear both;
+  z-index: 5;
+}
+/* line 205, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-divider {
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 100px;
+}
+/* line 212, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-divider:first-child {
+  width: 0;
+}
+/* line 216, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+  position: absolute;
+  top: -1.5em;
+  right: -60px;
+  color: #f6eadb;
+  text-shadow: none;
+}
+/* line 224, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-divider.minutes .flip-clock-label {
+  right: -88px;
+}
+/* line 225, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-divider.seconds .flip-clock-label {
+  right: -91px;
+}
+@media (max-width: 48em) {
+  /* line 228, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper .flip-clock-divider.hours {
+    clear: both;
+    width: 0;
+  }
+  /* line 232, ../sass/_flipclock.scss */
+  .content .flip-clock-wrapper .flip-clock-divider.hours .flip-clock-dot {
+    display: none;
+  }
+}
+/* line 239, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-dot {
+  display: block;
+  background: #dbaeae;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  left: 5px;
+}
+/* line 248, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-dot.top {
+  top: 30px;
+}
+/* line 252, ../sass/_flipclock.scss */
+.content .flip-clock-wrapper .flip-clock-dot.bottom {
+  bottom: 30px;
+}
+
+/* line 258, ../sass/_flipclock.scss */
+.flip-clock-meridium {
+  background: none;
+  box-shadow: 0 0 0 !important;
+  font-size: 36px !important;
+  color: #313333;
+  bottom: 10px;
+}
+
+@-moz-keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  20% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+@-webkit-keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  20% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+@keyframes asd {
+  0% {
+    z-index: 2;
+  }
+  20% {
+    z-index: 4;
+  }
+  100% {
+    z-index: 4;
+  }
+}
+/* line 278, ../sass/_flipclock.scss */
+.flip-clock-wrapper ul.play li.flip-clock-active .down {
+  z-index: 2;
+  -moz-animation: turn 0.5s 0.5s linear both;
+  -webkit-animation: turn 0.5s 0.5s linear both;
+  animation: turn 0.5s 0.5s linear both;
+}
+
+@-moz-keyframes turn {
+  0% {
+    -moz-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+  100% {
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+@keyframes turn {
+  0% {
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+  }
+  100% {
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+/* line 292, ../sass/_flipclock.scss */
+.flip-clock-wrapper ul.play li.flip-clock-before .up {
+  z-index: 2;
+  -moz-animation: turn2 0.5s linear both;
+  -webkit-animation: turn2 0.5s linear both;
+  animation: turn2 0.5s linear both;
+}
+
+@-moz-keyframes turn2 {
+  0% {
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+}
+@-webkit-keyframes turn2 {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+}
+@keyframes turn2 {
+  0% {
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+  }
+}
+/* line 306, ../sass/_flipclock.scss */
+.flip-clock-wrapper ul li.flip-clock-active {
+  z-index: 3;
+}
+
+/* SHADOW */
+/* line 309, ../sass/_flipclock.scss */
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, #000000 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, #000000 100%);
+  -moz-animation: show 0.5s linear both;
+  -webkit-animation: show 0.5s linear both;
+  animation: show 0.5s linear both;
+}
+
+/* line 319, ../sass/_flipclock.scss */
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, #000000 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, black 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, #000000 100%);
+  -moz-animation: hide 0.5s 0.3s linear both;
+  -webkit-animation: hide 0.5s 0.3s linear both;
+  animation: hide 0.5s 0.3s linear both;
+}
+
+/*DOWN*/
+/* line 331, ../sass/_flipclock.scss */
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.1) 100%);
+  -moz-animation: show 0.5s linear both;
+  -webkit-animation: show 0.5s linear both;
+  animation: show 0.5s linear both;
+}
+
+/* line 341, ../sass/_flipclock.scss */
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+  background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.1)));
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -o-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: -ms-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.1) 100%);
+  -moz-animation: hide 0.5s 0.3s linear both;
+  -webkit-animation: hide 0.5s 0.3s linear both;
+  animation: hide 0.5s 0.3s linear both;
+}
+
+@-moz-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 1, ../sass/_header.scss */
+header.header {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+@media (min-width: 48.0625em) {
+  /* line 1, ../sass/_header.scss */
+  header.header {
+    padding: 0 14px;
+    padding: 0 0.875rem;
+  }
+}
+/* line 11, ../sass/_header.scss */
+header.header .nav {
+  position: relative;
+}
+/* line 15, ../sass/_header.scss */
+header.header .row .inner-wrap {
+  *zoom: 1;
+}
+/* line 38, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+header.header .row .inner-wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 19, ../sass/_header.scss */
+header.header.solid-colour {
+  background-color: #FFF;
+  border-bottom: 1px solid #AEAEAE;
+}
+
+@media (min-width: 48.0625em) {
+  /* line 1, ../sass/_menu.scss */
+  .nav {
+    text-align: right;
+  }
+  /* line 5, ../sass/_menu.scss */
+  .nav button.nav-button {
+    display: none;
+  }
+}
+/* line 10, ../sass/_menu.scss */
+.nav button.nav-button {
+  margin: 0;
+  padding: 21px 12px;
+  padding: 1.3125rem 0.75rem;
+  border: 0;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  background: #550202;
+  position: absolute;
+  top: 0;
+}
+/* line 21, ../sass/_menu.scss */
+.nav button.nav-button:focus {
+  outline: none;
+}
+@media (max-width: 48em) {
+  /* line 10, ../sass/_menu.scss */
+  .nav button.nav-button {
+    display: block;
+  }
+  /* line 95, ../sass/_mixins.scss */
+  .nav button.nav-button:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background: #FFF;
+    top: 11px;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    -moz-box-shadow: 0 16px 0 0 #FFF;
+    -webkit-box-shadow: 0 16px 0 0 #FFF;
+    box-shadow: 0 16px 0 0 #FFF;
+    -moz-transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+    -o-transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+    -webkit-transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+    transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+  }
+  /* line 108, ../sass/_mixins.scss */
+  .nav button.nav-button:after {
+    position: absolute;
+    content: '';
+    display: block;
+    background: #FFF;
+    top: 19px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    -moz-transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+    -o-transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+    -webkit-transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+    transition: cubic-bezier(0.71, 1.7, 0.77, 1.24) 0.2s;
+  }
+  /* line 29, ../sass/_menu.scss */
+  .nav button.nav-button:before {
+    position: relative;
+    top: -6px;
+  }
+  /* line 34, ../sass/_menu.scss */
+  .nav button.nav-button:after {
+    position: relative;
+    top: 0;
+  }
+}
+/* line 41, ../sass/_menu.scss */
+.nav ul {
+  position: relative;
+  list-style: none;
+  z-index: 20;
+  display: inline;
+}
+/* line 47, ../sass/_menu.scss */
+.nav ul li {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 42px;
+  line-height: 2.625rem;
+  font-family: "liebeerika_regularregular";
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+/* line 57, ../sass/_menu.scss */
+.nav ul li a {
+  display: inline-block;
+  padding: 7px;
+  padding: 0.4375rem;
+  text-decoration: none;
 }
 
 /* line 3, ../sass/style.scss */
@@ -718,7 +1458,7 @@ html {
 body {
   font-family: "Karla", sans-serif;
   font-size: 16px;
-  color: #f2fac5;
+  color: #f6eadb;
   background: url("../images/wood-bg.jpg") no-repeat center;
   background-attachment: fixed;
   background-size: cover;
@@ -742,7 +1482,7 @@ body {
   margin: 0 auto;
   *zoom: 1;
 }
-/* line 38, ../../../../../Ruby24/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 .inner-wrap:after {
   content: "";
   display: table;
@@ -750,54 +1490,55 @@ body {
 }
 
 /* line 35, ../sass/style.scss */
-.main ul, .main ol {
+.main > .row {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 38, ../sass/style.scss */
+.main > .row.content {
+  padding: 28px;
+  padding: 1.75rem;
+}
+
+/* line 45, ../sass/style.scss */
+.content ul, .content ol {
   list-style: disc;
   list-style-position: outside;
   margin: 0 0 28px;
   margin: 0 0 1.75rem;
   padding: 0 0 0 20px;
 }
-/* line 42, ../sass/style.scss */
-.main ol {
+/* line 52, ../sass/style.scss */
+.content ol {
   list-style: decimal;
 }
-/* line 46, ../sass/style.scss */
-.main > .row {
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 49, ../sass/style.scss */
-.main > .row.content {
-  padding: 28px;
-  padding: 1.75rem;
-}
 
-/* line 55, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 a img {
   border: none;
 }
 
-/* line 59, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 .clear {
   clear: both;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .fr {
   float: right;
 }
 
-/* line 67, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .fl {
   float: left;
 }
 
-/* line 71, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .center {
   text-align: center;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 hr {
   border: none;
   background: #AEAEAE;
@@ -807,22 +1548,22 @@ hr {
 }
 
 /*********** SLIDER *************/
-/* line 84, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 section.slider-container {
   position: relative;
   margin-bottom: 28px;
   margin-bottom: 1.75rem;
 }
-/* line 88, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 section.slider-container .slider {
   height: 0;
   padding-bottom: 37.5%;
 }
-/* line 92, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 section.slider-container .slider:not(.slick-initialized) {
   overflow: hidden;
 }
-/* line 96, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 section.slider-container .slider figure {
   position: relative;
   padding-bottom: 37.5%;
@@ -836,51 +1577,75 @@ section.slider-container .slider figure img {
   left: 0;
   width: 100%;
 }
-/* line 99, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
+section.slider-container .slider figure:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #f6eadb;
+  z-index: -1;
+}
+/* line 111, ../sass/style.scss */
+section.slider-container .slider figure img {
+  opacity: 0.6;
+}
+/* line 115, ../sass/style.scss */
 section.slider-container .slider figure figcaption {
   padding: 28px;
   padding: 1.75rem;
   position: absolute;
   margin: auto;
-  background: rgba(255, 255, 255, 0.5);
   width: 80%;
-  max-width: 580px;
+  max-width: 680px;
   left: 0;
   right: 0;
-  top: 20%;
-  -webkit-transform: translate(0, -20%);
-  -moz-transform: translate(0, -20%);
-  -ms-transform: translate(0, -20%);
-  -o-transform: translate(0, -20%);
-  transform: translate(0, -20%);
+  top: 25%;
+  -moz-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -webkit-transform: translate(0, -25%);
+  transform: translate(0, -25%);
   text-align: center;
   font-family: "springTime";
-  font-size: 60px;
-  line-height: 84px;
-  line-height: 5.25rem;
-  color: #6b1310;
+  font-size: 75px;
+  line-height: 126px;
+  line-height: 7.875rem;
+  color: #550202;
 }
-/* line 120, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 section.slider-container .slider figure figcaption span {
   font-family: "AutumnInNovember";
-  font-size: 54px;
+  font-size: 65px;
   margin: -8px 0;
   display: inline-block;
 }
+@media (max-width: 75em) {
+  /* line 115, ../sass/style.scss */
+  section.slider-container .slider figure figcaption {
+    font-size: 60px;
+    line-height: 98px;
+    line-height: 6.125rem;
+  }
+  /* line 141, ../sass/style.scss */
+  section.slider-container .slider figure figcaption span {
+    font-size: 54px;
+  }
+}
 @media (max-width: 61.25em) {
-  /* line 99, ../sass/style.scss */
+  /* line 115, ../sass/style.scss */
   section.slider-container .slider figure figcaption {
     font-size: 48px;
-    line-height: 56px;
-    line-height: 3.5rem;
+    line-height: 70px;
+    line-height: 4.375rem;
   }
-  /* line 130, ../sass/style.scss */
+  /* line 149, ../sass/style.scss */
   section.slider-container .slider figure figcaption span {
     font-size: 40px;
   }
 }
 @media (max-width: 40em) {
-  /* line 99, ../sass/style.scss */
+  /* line 115, ../sass/style.scss */
   section.slider-container .slider figure figcaption {
     padding: 14px;
     padding: 0.875rem;
@@ -888,7 +1653,7 @@ section.slider-container .slider figure figcaption span {
     line-height: 42px;
     line-height: 2.625rem;
   }
-  /* line 140, ../sass/style.scss */
+  /* line 159, ../sass/style.scss */
   section.slider-container .slider figure figcaption span {
     font-size: 24px;
   }

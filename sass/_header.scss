@@ -1,0 +1,23 @@
+header.header {
+    @include transition(all 0.2s ease);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+
+    @include media(">=tablet-gt") {
+        @include rem(padding, 0 rhythm(0.5));
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .row .inner-wrap {
+        @include pie-clearfix;
+    }
+
+    &.solid-colour {
+        background-color: $white;
+        border-bottom: 1px solid $light-grey;
+    }
+}

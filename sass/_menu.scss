@@ -1,0 +1,64 @@
+.nav {
+    @include media(">=tablet-gt") {
+        text-align: right;
+
+        button.nav-button {
+            display: none;
+        }
+    }
+
+    button.nav-button {
+        margin: 0;
+        @include rem(padding, 21px 12px);
+        border: 0;
+        cursor: pointer;
+        z-index: 1;
+        overflow: hidden;
+        background: $primary;
+        position: absolute;
+        top: 0;
+
+        &:focus {
+            outline: none;
+        }
+
+        @include media("<=tablet") {
+            display: block;
+            @include menu-icon;
+
+            &:before {
+                position: relative;
+                top: -6px;
+            }
+
+            &:after {
+                position: relative;
+                top: 0;
+            }
+        }
+    }
+
+    ul {
+        position: relative;
+        list-style: none;
+        z-index: 20;
+        display: inline;
+
+        li {
+            @include adjust-font-size-to($delta);
+            font-family: $header-font-family;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+
+            a {
+                display: inline-block;
+                @include rem(padding,rhythm(0.25));
+                text-decoration: none;
+            }
+        }
+    }
+}

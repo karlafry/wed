@@ -170,6 +170,15 @@ $slick-dot-size: 12px !default;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
+    @include media("<=tablet") {
+        height: 28px;
+        width: 28px;
+
+        &:before {
+            font-size: 26px;
+        }
+    }
 }
 
 .slick-prev {
@@ -255,6 +264,32 @@ $slick-dot-size: 12px !default;
             content: $slick-dot-active-character;
             color: $slick-dot-color-active;
             font-size: $slick-dot-size * 1.5;
+        }
+    }
+
+    @include media("<=tablet") {
+        bottom: 0;
+
+        li {
+            height: 15px;
+            width: 15px;
+
+            button {
+                height: 15px;
+                width: 15px;
+                padding: 2px;
+
+                &:before {
+                    height: 15px;
+                    width: 15px;
+                    line-height: 15px;
+                    font-size: $slick-dot-size * 0.75;
+                }
+            }
+
+            &.slick-active button:before {
+                font-size: $slick-dot-size;
+            }
         }
     }
 }

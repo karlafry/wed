@@ -4,6 +4,10 @@
     $page_desc = '';
     $page_title = 'Welcome';
     include ('inc/site_head.inc');
+
+    $now = strtotime("now");
+    $date = strtotime("2018-10-12 13:00:00");
+    $diff = $date - $now;
 ?>
 
 <div class="main">
@@ -47,6 +51,13 @@
             <p>Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Vivamus arcu felis bibendum ut tristique et egestas. Pulvinar elementum integer enim neque. Ornare aenean euismod elementum nisi quis. Sed blandit libero volutpat sed cras. Luctus venenatis lectus magna fringilla urna. In mollis nunc sed id semper risus in hendrerit gravida. Aliquet bibendum enim facilisis gravida. Posuere urna nec tincidunt praesent semper. Facilisis magna etiam tempor orci. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Gravida rutrum quisque non tellus orci. At volutpat diam ut venenatis tellus in metus. Interdum consectetur libero id faucibus nisl tincidunt. Semper risus in hendrerit gravida rutrum. Facilisis volutpat est velit egestas dui. Quam vulputate dignissim suspendisse in. Orci nulla pellentesque dignissim enim sit amet venenatis. Purus in massa tempor nec feugiat nisl pretium fusce. Elit sed vulputate mi sit amet mauris commodo quis imperdiet.</p>
         </div>
     </div>
+
+    <div class="row content">
+        <div class="inner-wrap">
+            <h2>Countdown to the big day</h2>
+            <div class="clock-countdown"></div>
+        </div>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -55,6 +66,11 @@
             infinite: true,
             autoplay: true,
             dots: true
+        });
+
+        var clock = jQuery('.clock-countdown').FlipClock(<?=$diff?>, {
+            clockFace: 'DailyCounter',
+            countdown: true,
         });
     });
 </script>

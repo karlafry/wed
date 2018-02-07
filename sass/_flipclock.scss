@@ -1,0 +1,367 @@
+
+/* Reset */
+.flip-clock-wrapper * {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    @include box-sizing(border-box);
+    @include backface-visibility(hidden);
+}
+
+.flip-clock-wrapper a {
+    cursor: pointer;
+    pointer-events: none;
+    text-decoration: none;
+    color: $copy;
+}
+
+.flip-clock-wrapper.clearfix:before,
+.flip-clock-wrapper.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.flip-clock-wrapper.clearfix:after {
+    clear: both;
+}
+
+.flip-clock-wrapper.clearfix {
+    *zoom: 1;
+}
+
+/* Main */
+.content .flip-clock-wrapper {
+    @include rem(margin, rhythm(2) 0);
+    font: normal 20px "Karla", sans-serif;
+    -webkit-user-select: none;
+    text-align: center;
+    position: relative;
+
+    &:after, &:before {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    @include media("<=tablet",">phone") {
+        zoom: 0.8;
+    }
+
+    @include media("<=phone") {
+        zoom: 0.6;
+    }
+
+    ul {
+        position: relative;
+        float: left;
+        margin: 5px;
+        padding: 0;
+        width: 60px;
+        height: 90px;
+        font-weight: bold;
+        border-radius: 6px;
+        background: $primary;
+        box-shadow: 0 2px 5px rgba($black, .5);
+        list-style: none;
+
+        @include media("<=tablet") {
+            @include rem(margin-bottom, rhythm(2));
+        }
+
+        @include media("<=phone") {
+            @include rem(margin, 2px 2px rhythm(1.5));
+        }
+
+        li {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 87px;
+
+            @include media("<=tablet",">phone") {
+                line-height: 60px;
+            }
+
+            @include media("<=phone") {
+                line-height: 40px;
+            }
+
+            &:first-child {
+                z-index: 2;
+            }
+
+            a {
+                display: block;
+                height: 100%;
+                @include perspective(200px);
+                margin: 0 !important;
+                overflow: visible !important;
+
+                div {
+                    z-index: 1;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 50%;
+                    overflow: hidden;
+
+                    .shadow {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+                    }
+
+                    div.inn {
+                        position: absolute;
+                        left: 0;
+                        z-index: 1;
+                        width: 100%;
+                        height: 200%;
+                        color: $copy;
+                        text-shadow: 0 1px 2px #000;
+                        text-align: center;
+                        background-color: $primary;
+                        border-radius: 6px;
+                        font-size: 70px;
+
+                        @include media("<=tablet",">phone") {
+                            font-size: 55px;
+                        }
+
+                        @include media("<=phone") {
+                            font-size: 38px;
+                        }
+                    }
+
+                    &.up {
+                        @include transform-origin(50%, 100%);
+                        top: 0;
+
+                        &:after {
+                            content: "";
+                            position:absolute;
+                            top:44px;
+                            left:0;
+                            z-index: 5;
+                            width: 100%;
+                            height: 3px;
+                            background-color: rgba($black,.2);
+                        }
+
+                        div.inn {
+                            top: 0;
+
+                            @include media("<=tablet",">phone") {
+                                padding-top: 3px;
+                            }
+
+                            @include media("<=phone") {
+                                padding-top: 8px;
+                            }
+                        }
+                    }
+
+                    &.down {
+                        @include transform-origin(50%, 0);
+                        bottom: 0;
+                        border-bottom-left-radius: 6px;
+                        border-bottom-right-radius: 6px;
+
+                        div.inn {
+                            bottom: 0;
+
+                            @include media("<=tablet",">phone") {
+                                bottom: -3px;
+                            }
+
+                            @include media("<=phone") {
+                                bottom: -8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.play li {
+            &.flip-clock-before {
+                z-index: 3;
+            }
+
+            &.flip-clock-active {
+                @include animation(asd .5s .5s linear both);
+                z-index: 5;
+            }
+        }
+    }
+
+    .flip-clock-divider {
+        float: left;
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 100px;
+
+        &:first-child {
+            width: 0;
+        }
+
+        .flip-clock-label {
+            position: absolute;
+            top: -1.5em;
+            right: -60px;
+            color: $copy;
+            text-shadow: none;
+        }
+
+        &.minutes .flip-clock-label { right: -88px; }
+        &.seconds .flip-clock-label { right: -91px; }
+
+        @include media("<=tablet") {
+            &.hours {
+                clear: both;
+                width: 0;
+
+                .flip-clock-dot {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .flip-clock-dot {
+        display: block;
+        background: $accent-pink;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        border-radius: 50%;
+        left: 5px;
+
+        &.top {
+            top: 30px;
+        }
+
+        &.bottom {
+            bottom: 30px;
+        }
+    }
+}
+
+.flip-clock-meridium {
+    background: none;
+    box-shadow: 0 0 0 !important;
+    font-size: 36px !important;
+    color: rgb(49, 51, 51);
+    bottom: 10px;
+}
+
+@include keyframes(asd) {
+    0% {
+        z-index:2;
+    }
+    20% {
+        z-index:4;
+    }
+    100% {
+        z-index:4;
+    }
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down {
+    z-index: 2;
+    @include animation(turn .5s .5s linear both);
+}
+
+@include keyframes(turn) {
+    0% {
+        @include transform(rotateX(90deg));
+    }
+    100% {
+        @include transform(rotateX(0deg));
+    }
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-before .up {
+    z-index: 2;
+    @include animation(turn2 .5s linear both);
+}
+
+@include keyframes(turn2) {
+    0% {
+        @include transform(rotateX(0deg));
+    }
+    100% {
+        @include transform(rotateX(-90deg));
+    }
+}
+
+.flip-clock-wrapper ul li.flip-clock-active { z-index: 3; }
+
+/* SHADOW */
+.flip-clock-wrapper ul.play li.flip-clock-before .up .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    @include animation(show .5s linear both);
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .up .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, .1)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 1) 100%);
+    @include animation(hide .5s .3s linear both);
+}
+
+/*DOWN*/
+
+.flip-clock-wrapper ul.play li.flip-clock-before .down .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, .1)));
+    background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    @include animation(show .5s linear both);
+}
+
+.flip-clock-wrapper ul.play li.flip-clock-active .down .shadow {
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, .1)));
+    background: linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, .1) 100%);
+    @include animation(hide .5s .3s linear both);
+}
+
+@include keyframes(show) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(hide) {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

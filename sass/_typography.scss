@@ -57,15 +57,21 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
+  @include adjust-font-size-to($alpha);
+  @include rem(margin-bottom, rhythm(1.5));
+  font-family: $header-font-family;
+}
+
+h2 {
   @include adjust-font-size-to($beta);
   @include rem(margin-bottom, rhythm(1));
   font-family: $header-font-family;
 }
 
-h2 {
-  @include adjust-font-size-to($gamma);
-  @include rem(margin-bottom, rhythm(0.75));
-  font-family: $header-font-family;
+h3 {
+    @include adjust-font-size-to($gamma);
+    @include rem(margin-bottom, rhythm(1));
+    font-family: $header-font-family;
 }
 
 a , a:visited {

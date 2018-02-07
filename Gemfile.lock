@@ -14,6 +14,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
+    ffi (1.9.18)
     ffi (1.9.18-x86-mingw32)
     multi_json (1.13.1)
     rb-fsevent (0.10.2)
@@ -26,6 +27,7 @@ GEM
       sass (>= 3.3.0, < 3.5)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES

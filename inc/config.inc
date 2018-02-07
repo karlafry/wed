@@ -1,15 +1,13 @@
 <?php
-
-if(strpos($_SERVER['HTTP_HOST'], 'localhost') !== false)
+if(strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], 'spongebob') !== false)
 {
     /* DEV PATH DETAILS */
-
 
     // IN-HOUSE ROOT ADDRESSES (must end with '/')
     $site_home 		= 'http://'.$_SERVER['HTTP_HOST'].'/DEV/sean-karla-wedding/';
     $static_home 	= 'http://'.$_SERVER['HTTP_HOST'].'/DEV/sean-karla-wedding/';
     $absolute_path 	= $_SERVER['DOCUMENT_ROOT'].'/DEV/sean-karla-wedding/';
-
+    define('DEV_MODE', true);
     //---- DB DETAILS  -------------------------------------------------------------
 
     $db_host = "localhost";
@@ -23,7 +21,7 @@ elseif(strpos($_SERVER['HTTP_HOST'], 'karlafry.co.uk') !== false)
     $site_home 		= 'http://'.$_SERVER['HTTP_HOST'].'/clients/sean-karla-wedding/';
     $static_home 	= 'http://'.$_SERVER['HTTP_HOST'].'/clients/sean-karla-wedding/';
     $absolute_path 	= $_SERVER['DOCUMENT_ROOT'].'/clients/sean-karla-wedding/';
-
+    define('DEV_MODE', true);
     //----- DB DETAILS  -------------------------------------------------------------
 
     $db_host = "213.171.200.80";
@@ -40,7 +38,7 @@ else
     $site_home 		= 'http://'.$_SERVER['HTTP_HOST'].'/';
     $static_home 	= 'http://'.$_SERVER['HTTP_HOST'].'/';
     $absolute_path 	= $_SERVER['DOCUMENT_ROOT'].'/';
-
+    define('DEV_MODE', false);
     //----- DB DETAILS  -------------------------------------------------------------
 
     $db_host = "213.171.200.80";
@@ -58,7 +56,7 @@ $live_root_domain = substr( $_SERVER['HTTP_HOST'], (strpos($_SERVER['HTTP_HOST']
 // If the site is a sub-site on a domain
 $additional_folder_name = '';
 
-if(strpos($_SERVER['HTTP_HOST'], 'localhost') === false)
+if(!DEV_MODE)
 {
     set_include_path('/var/www/vhosts/'.$live_root_domain.'/httpdocs/'.$additional_folder_name);
     $absolute_path = $_SERVER['DOCUMENT_ROOT'].'/'.$additional_folder_name;

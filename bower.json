@@ -19,6 +19,8 @@
     "susy": "~2.2.5",
     "sass-rem": "~1.2.1",
     "enquire": "~2.1.2",
-    "media-match": "~2.0.2"
+    "media-match": "~2.0.2",
+    "jquery.togglebutton.min": "https://raw.githubusercontent.com/powderblue/jquery-togglebutton/master/jquery.togglebutton.min.js",
+    "flipclock": "~0.7.7"
   }
 }

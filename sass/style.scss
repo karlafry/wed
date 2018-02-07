@@ -32,6 +32,16 @@ body {
 }
 
 .main {
+    > .row {
+        @include clearfix;
+
+        &.content {
+            @include rem(padding, rhythm(1));
+        }
+    }
+}
+
+.content {
     ul, ol {
         list-style: disc;
         list-style-position: outside;
@@ -41,14 +51,6 @@ body {
 
     ol {
         list-style: decimal;
-    }
-
-    > .row {
-        @include clearfix;
-
-        &.content {
-            @include rem(padding, rhythm(1));
-        }
     }
 }
 
@@ -96,37 +98,54 @@ section.slider-container {
         figure {
             @include aspect-ratio-img(8, 3);
 
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background: $copy;
+                z-index: -1;
+            }
+
+            img {
+                opacity: 0.6;
+            }
+
             figcaption {
                 @include rem(padding, rhythm(1));
                 position: absolute;
                 margin: auto;
-                background: rgba(#fff,0.5);
                 width: 80%;
-                max-width: 580px;
+                max-width: 680px;
                 left: 0;
                 right: 0;
-                top: 20%;
-                -webkit-transform: translate(0, -20%);
-                -moz-transform: translate(0, -20%);
-                -ms-transform: translate(0, -20%);
-                -o-transform: translate(0, -20%);
-                transform: translate(0, -20%);
+                top: 25%;
+                @include transform(translate(0, -25%));
                 text-align: center;
                 font-family: $banner-font-family;
-                font-size: $alpha;
-                @include rem(line-height, rhythm(3));
+                font-size: $alpha * 1.25;
+                @include rem(line-height, rhythm(4.5));
                 color: $primary;
 
                 span {
                     font-family: $banner-alt-font-family;
-                    font-size: 54px;
+                    font-size: 65px;
                     margin: -8px 0;
                     display: inline-block;
                 }
 
+                @include media("<=desktop-larger") {
+                    font-size: $alpha;
+                    @include rem(line-height, rhythm(3.5));
+                    span {
+                        font-size: 54px;
+                    }
+                }
+
                 @include media("<=desktop-smaller") {
                     font-size: $beta;
-                    @include rem(line-height, rhythm(2));
+                    @include rem(line-height, rhythm(2.5));
                     span {
                         font-size: 40px;
                     }
