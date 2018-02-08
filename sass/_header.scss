@@ -6,6 +6,11 @@ header.header {
 
     @include media(">=tablet-gt") {
         @include rem(padding, 0 rhythm(0.5));
+
+        &.solid-colour {
+            background-color: $white;
+            border-bottom: 1px solid $light-grey;
+        }
     }
 
     .nav {
@@ -14,10 +19,5 @@ header.header {
 
     .row .inner-wrap {
         @include pie-clearfix;
-    }
-
-    &.solid-colour {
-        background-color: $white;
-        border-bottom: 1px solid $light-grey;
     }
 }

@@ -18,4 +18,4 @@
 </head>
 <body>
 <div id="wrapper">
-    <?php require_once ABSOLUTE_PATH.'inc/header.inc';?>
+    <?php include ABSOLUTE_PATH.'inc/header.inc';?>

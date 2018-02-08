@@ -66,9 +66,9 @@
     position: relative;
     background: $white;
     width: 100%;
-    font-family: $header-font-family;
+    font-family: $font-family;
     font-size: $epsilon;
-    color: $copy;
+    color: $black;
     padding: 6px;
     border: none;
     border-bottom: 2px solid;
@@ -102,7 +102,7 @@
         width: 22px;
         height: 2px;
         @include box-shadow(0 16px 0 0 $white);
-        @include transition(.2s cubic-bezier(0.71, 1.7, .77, 1.24));
+        @include transition(.2s ease-in-out);
     }
 
     &:after {
@@ -114,8 +114,19 @@
         left: 0;
         width: 16px;
         height: 2px;
-        @include transition(.2s cubic-bezier(0.71, 1.7, .77, 1.24));
+        @include transition(.2s ease-in-out);
     }
+}
+
+@mixin linearGradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
 /* Vertical Rhythm : establish-baseline - http://compass-style.org/reference/compass/typography/vertical_rhythm/ */

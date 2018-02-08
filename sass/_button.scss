@@ -1,0 +1,33 @@
+@mixin button() {
+    @include rem(padding, rhythm(.25) rhythm(0.75));
+    @include appearance(none);
+    @include transition(all .3s);
+    position: relative;
+    background: $primary;
+    border: 2px solid $primary;
+    color: $copy;
+    font-weight: bold;
+    font-family: $header-font-family;
+    font-size: $epsilon;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    outline: none;
+
+    &:hover {
+        background-color: $white;
+        color: $primary;
+        text-decoration: none;
+    }
+}
+
+%button {
+    @include button();
+}
+
+.btn,
+input[type="submit"] {
+    @extend %button;
+}

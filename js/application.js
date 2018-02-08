@@ -11,6 +11,20 @@ jQuery(document).ready(function() {
         }
     });
 
+    enquire.register("screen and (max-width: 61.25em)", {
+        match: function () {
+            // Move the nav
+            jQuery('header .nav-button').data('toggleButton').off();
+            jQuery('header .nav nav').removeAttr('style');
+        },
+
+        unmatch: function () {
+            var animateAtStartup = false;
+            jQuery('.nav-button').data('toggleButton').on(animateAtStartup);
+            jQuery('header .nav nav').removeAttr('style');
+        }
+    });
+
     var url = window.location.href;
     jQuery('#menu a[href="'+url+'"]').addClass('current-page');
 

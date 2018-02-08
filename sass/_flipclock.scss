@@ -31,7 +31,7 @@
 
 /* Main */
 .content .flip-clock-wrapper {
-    @include rem(margin, rhythm(2) 0);
+    @include rem(margin, rhythm(2) 0 rhythm(0.5));
     font: normal 20px "Karla", sans-serif;
     -webkit-user-select: none;
     text-align: center;

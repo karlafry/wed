@@ -1,4 +1,4 @@
-<?php require_once ABSOLUTE_PATH.'inc/footer.inc'; ?>
+<?php include ABSOLUTE_PATH.'inc/footer.inc'; ?>
 </div> <!-- end wrapper -->
 
 <!-- jQuery Libs
