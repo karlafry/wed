@@ -134,20 +134,25 @@ label {
     width: 30%;
     margin-right: 1.5%;
     display: inline-block;
-    font-size: $theta;
+    font-size: $eta;
     letter-spacing: 2px;
     position: relative;
     vertical-align: top;
 
     @include media(">phone-ls"){
         line-height: 32px;
+        text-align: right;
 
         &.with-radio {
             width: 20%;
         }
     }
 
-    + input, + select, + textarea, + div.select-wrapper {
+    + input,
+    + select,
+    + textarea,
+    + div.select-wrapper,
+    + div.name-wrapper {
         width: 67%;
         max-width: 500px;
     }
@@ -160,7 +165,11 @@ label {
     @include media("<=phone-ls") /* <=640px*/ {
         width: 100%;
 
-        + input, + select, + textarea, + div.select-wrapper {
+        + input,
+        + select,
+        + textarea,
+        + div.select-wrapper,
+        + div.name-wrapper {
             width: 100%;
         }
     }

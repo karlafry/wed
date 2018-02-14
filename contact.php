@@ -7,9 +7,22 @@ include ('inc/site_head.inc');
 
 
 if(isset($_POST) && count($_POST) > 0) {
-    if($_POST['submit'] == 'Submit') {
+    if($_POST['submit_check'] == '1') {
         //send email with message.
-        $msg = "Thank you, your message has been sent successfully.";
+$mail_body = "
+You have received an enquiry from the wedding website.\n\n
+From: {$_POST['tx_fname']} {$_POST['tx_surname']} \n
+Reply: {$_POST['tx_email']}\n
+Message:\n
+{$_POST['tx_message']}
+";
+        $headers = 'From: Wedding Site <contact@sean-karla-wedding.co.uk>' . "\r\n";
+        if(mail('karla.fry86@gmail.com','Wedding Website enquiry',$mail_body, $headers)) {
+            $msg = "Thank you, your message has been sent successfully.";
+        } else {
+            $msg = "We were not able to send your message, please try again";
+        }
+
     } else {
         $msg = "Something went wrong, please try again.";
     }
@@ -17,7 +30,7 @@ if(isset($_POST) && count($_POST) > 0) {
 }
 ?>
 
-<div class="main">
+<div class="main no-banner">
     <div class="row content">
         <div class="inner-wrap">
             <section class="twelvecol">
@@ -50,7 +63,8 @@ if(isset($_POST) && count($_POST) > 0) {
                         <fieldset>
                             <div id="recaptcha" class="g-recaptcha" data-sitekey="6Ld6N0UUAAAAAIJhczsnxtRy24jsdCinjwvNBHAE" data-callback="onSubmit" data-size="invisible">
                             </div>
-                            <input type="submit" name="submit" value="Sumbit">
+                            <input type="hidden" name="submit_check" value="1">
+                            <button type="submit" class="btn" id="submit_form">Submit</button>
                         </fieldset>
                     </form>
                 <?php endif; ?>
@@ -64,9 +78,11 @@ if(isset($_POST) && count($_POST) > 0) {
         jQuery('#contact_form').submit();
     }
 
-    jQuery('#contact_form').submit(function(e) {
-       e.preventDefault();
-       grecaptcha.execute();
+    jQuery('#submit_form').on('click', function(e) {
+        if(jQuery('#contact_form')[0].checkValidity()) {
+            e.preventDefault();
+            grecaptcha.execute();
+        }
     });
 </script>
 <?php

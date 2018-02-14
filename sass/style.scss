@@ -21,7 +21,6 @@ body {
 
 #wrapper {
     @include clearfix;
-    background: rgba(23, 15, 9, 0.75);
 }
 
 .inner-wrap {
@@ -38,7 +37,15 @@ body {
 
         &.content {
             @include rem(padding, 0 rhythm(1));
+
+            > .inner-wrap section.twelvecol {
+                @include rem(margin-bottom, rhythm(2));
+            }
         }
+    }
+
+    &.no-banner {
+        @include rem(padding-top, rhythm(2));
     }
 }
 
@@ -52,6 +59,11 @@ body {
 
     ol {
         list-style: decimal;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -194,5 +206,87 @@ div.map-container {
         bottom: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+#instafeed {
+    > div {
+        margin-bottom: gutters();
+
+        @include media(">=desktop") {
+            @include span(3);
+            &:nth-of-type(4n+4) {
+                margin-right: 0;
+            }
+        }
+
+        @include media("<desktop",">=tablet-gt") {
+            @include span(4);
+
+            &:nth-of-type(3n+3) {
+                margin-right: 0;
+            }
+        }
+
+        @include media("<tablet",">=phone") {
+            @include span(6);
+
+            &:nth-of-type(even) {
+                margin-right: 0;
+            }
+        }
+
+        @include media("<=phone") {
+            @include span(12);
+        }
+
+        figure {
+            @include aspect-ratio-img(1,1);
+            position: relative;
+            cursor: pointer;
+
+            figcaption {
+                @include rem(padding, rhythm(0.5));
+                font-size: $theta;
+                line-height: 1.2;
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba($black, 0.6);
+                z-index: 2;
+
+                div {
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translate(0, -50%));
+
+                    span {
+                        @include icon-before('\f004',$epsilon);
+                        font-size: $epsilon;
+                        display: block;
+                    }
+                }
+            }
+
+            img {
+                bottom: 0;
+                margin: auto;
+                z-index: 1;
+                @include transition(all .3s);
+            }
+
+            &:hover {
+                figcaption {
+                    display: block;
+                }
+
+                img {
+                    @include transform(scale(1.25));
+                }
+            }
+        }
     }
 }

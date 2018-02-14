@@ -1,28 +1,28 @@
 @font-face {
-  font-family: 'springTime';
-  src: url('../fonts/springtime_webfont.woff2') format('woff2'),
-  url('../fonts/springtime_webfont.woff') format('woff'),
-  url('../fonts/springtime_webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'springTime';
+    src: url('../fonts/springtime_webfont.woff2') format('woff2'),
+    url('../fonts/springtime_webfont.woff') format('woff'),
+    url('../fonts/springtime_webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'AutumnInNovember';
-  src: url('../fonts/autumn_in_november_webfont.woff2') format('woff2'),
-  url('../fonts/autumn_in_november_webfont.woff') format('woff'),
-  url('../fonts/autumn_in_november_webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'AutumnInNovember';
+    src: url('../fonts/autumn_in_november_webfont.woff2') format('woff2'),
+    url('../fonts/autumn_in_november_webfont.woff') format('woff'),
+    url('../fonts/autumn_in_november_webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'liebeerika_regularregular';
-  src: url('../fonts/liebeerika-regular-webfont.woff2') format('woff2'),
-  url('../fonts/liebeerika-regular-webfont.woff') format('woff'),
-  url('../fonts/liebeerika-regular-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'liebeerika_regularregular';
+    src: url('../fonts/liebeerika-regular-webfont.woff2') format('woff2'),
+    url('../fonts/liebeerika-regular-webfont.woff') format('woff'),
+    url('../fonts/liebeerika-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Karla');
@@ -49,23 +49,46 @@ $theta: 12px;
 
 @include establish-baseline;
 
-h1, h2, h3, h4, h5, h6{
-  @include font-smoothing;
-  @include margin-trailer;
-  margin-top: 0;
-  color: $copy;
+h1, h2, h3, h4, h5, h6 {
+    @include font-smoothing;
+    @include margin-trailer;
+    margin-top: 0;
+    color: $copy;
 }
 
 h1 {
-  @include adjust-font-size-to($alpha);
-  @include rem(margin-bottom, rhythm(1.5));
-  font-family: $header-font-family;
+    @include adjust-font-size-to($alpha);
+    @include rem(margin-bottom, rhythm(1.5));
+    font-family: $header-font-family;
+    text-align: center;
+
+    @include media(">phone") {
+        &:before,
+        &:after {
+            content: '';
+            height: 35px;
+            width: 25%;
+            max-width: 210px;
+            display: inline-block;
+        }
+
+        &:before {
+            background: url('../images/arrow-header-left.png') no-repeat center;
+            background-size: contain;
+            margin-right: 5px;
+        }
+        &:after {
+            background: url('../images/arrow-header-right.png') no-repeat center;
+            background-size: contain;
+            margin-left: 5px;
+        }
+    }
 }
 
 h2 {
-  @include adjust-font-size-to($beta);
-  @include rem(margin-bottom, rhythm(1));
-  font-family: $header-font-family;
+    @include adjust-font-size-to($beta);
+    @include rem(margin-bottom, rhythm(1));
+    font-family: $header-font-family;
 }
 
 h3 {
@@ -74,43 +97,49 @@ h3 {
     font-family: $header-font-family;
 }
 
-a , a:visited {
-  text-decoration: none;
-  color: $primary;
-  outline: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &.btn {
-    color: $primary;
+a, a:visited {
+    text-decoration: none;
+    color: $accent-pink;
+    outline: none;
 
     &:hover {
-      color: $white;
+        text-decoration: underline;
     }
-  }
+
+    &.btn {
+        color: $accent-pink;
+
+        &:hover {
+            color: $white;
+        }
+    }
 }
 
-p, li{
-  @include font-smoothing;
-  @include margin-trailer;
-  font-weight: 300;
+p, li {
+    @include font-smoothing;
+    @include margin-trailer;
 }
 
 sup,
 sub {
-  font-size: 0.6em;
-  height: 0;
-  line-height: 1;
-  vertical-align: baseline;
-  _vertical-align: bottom;
-  position: relative;
+    font-size: 0.6em;
+    height: 0;
+    line-height: 1;
+    vertical-align: baseline;
+    _vertical-align: bottom;
+    position: relative;
 }
+
 sup {
-  bottom: 0.75em;
+    bottom: 0.75em;
 }
+
 sub {
-  top: 0.5em;
+    top: 0.5em;
+}
+
+address {
+    font-style: italic;
+    @include margin-trailer;
 }
 

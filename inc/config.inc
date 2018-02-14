@@ -8,8 +8,9 @@ if(strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP
     $static_home 	= 'http://'.$_SERVER['HTTP_HOST'].'/DEV/sean-karla-wedding/';
     $absolute_path 	= $_SERVER['DOCUMENT_ROOT'].'/DEV/sean-karla-wedding/';
     define('DEV_MODE', true);
-    //---- DB DETAILS  -------------------------------------------------------------
+    error_reporting(E_ALL & ~E_STRICT & ~E_NOTICE & ~E_DEPRECATED);
 
+    //---- DB DETAILS  -------------------------------------------------------------
     $db_host = "localhost";
     $db_name = "sk-wedding";
     $db_username = "root";
@@ -22,10 +23,11 @@ elseif(strpos($_SERVER['HTTP_HOST'], 'karlafry.co.uk') !== false)
     $static_home 	= 'http://'.$_SERVER['HTTP_HOST'].'/clients/sean-karla-wedding/';
     $absolute_path 	= $_SERVER['DOCUMENT_ROOT'].'/clients/sean-karla-wedding/';
     define('DEV_MODE', true);
-    //----- DB DETAILS  -------------------------------------------------------------
+    error_reporting(0);
 
-    $db_host = "213.171.200.80";
-    $db_name = "sk-wedding";
+    //----- DB DETAILS  -------------------------------------------------------------
+    $db_host = "213.171.200.92";
+    $db_name = "skWedding";
     $db_username = "sk_wedding";
     $db_password = "SGakF!3HCp9$";
 
@@ -39,10 +41,11 @@ else
     $static_home 	= 'http://'.$_SERVER['HTTP_HOST'].'/';
     $absolute_path 	= $_SERVER['DOCUMENT_ROOT'].'/';
     define('DEV_MODE', false);
-    //----- DB DETAILS  -------------------------------------------------------------
+    error_reporting(0);
 
-    $db_host = "213.171.200.80";
-    $db_name = "sk-wedding";
+    //----- DB DETAILS  -------------------------------------------------------------
+    $db_host = "213.171.200.92";
+    $db_name = "skWedding";
     $db_username = "sk_wedding";
     $db_password = "SGakF!3HCp9$";
 
@@ -69,6 +72,9 @@ define('DBHOST', $db_host);
 define('DBUSER', $db_username);
 define('DBPASS', $db_password);
 define('DBNAME', $db_name);
+
+//define('INSTA_ACCESS_TOKEN', '2588795.a80768b.3429a7954c6b44aea571fb98cb2ad977');
+define('INSTA_ACCESS_TOKEN', '2588795.ba4c844.c4d56f83974049af8cded9eb352932ac');
 
 session_start();
 //Autoload classes

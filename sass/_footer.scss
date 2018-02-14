@@ -1,0 +1,11 @@
+footer {
+    img.flower-footer {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+
+        @include media (">tablet") {
+            @include rem(padding, rhythm(1));
+        }
+    }
+}

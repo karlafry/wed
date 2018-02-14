@@ -16,8 +16,4 @@ header.header {
     .nav {
         position: relative;
     }
-
-    .row .inner-wrap {
-        @include pie-clearfix;
-    }
 }

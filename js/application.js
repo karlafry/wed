@@ -11,7 +11,7 @@ jQuery(document).ready(function() {
         }
     });
 
-    enquire.register("screen and (max-width: 61.25em)", {
+    enquire.register("screen and (max-width: 48em)", {
         match: function () {
             // Move the nav
             jQuery('header .nav-button').data('toggleButton').off();
@@ -30,6 +30,10 @@ jQuery(document).ready(function() {
 
     var headerHeight = jQuery('header.header').outerHeight(true);
     if( jQuery(window).scrollTop() > headerHeight) {
+        jQuery('header.header').addClass('solid-colour');
+    }
+
+    if(jQuery('.main').hasClass('no-banner')) {
         jQuery('header.header').addClass('solid-colour');
     }
 

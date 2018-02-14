@@ -1,5 +1,5 @@
 @mixin button() {
-    @include rem(padding, rhythm(.25) rhythm(0.75));
+    @include rem(padding, rhythm(.25) rhythm(1.25));
     @include appearance(none);
     @include transition(all .3s);
     position: relative;
@@ -30,4 +30,7 @@
 .btn,
 input[type="submit"] {
     @extend %button;
+    width: auto;
+    display: block;
+    margin: auto;
 }

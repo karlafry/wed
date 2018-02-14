@@ -6,7 +6,7 @@ $page_title = 'RSVP';
 include ('inc/site_head.inc');
 ?>
 
-    <div class="main">
+    <div class="main no-banner">
         <div class="row content">
             <div class="inner-wrap">
                 <section class="twelvecol">
