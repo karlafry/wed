@@ -12,7 +12,7 @@ if(strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP
 
     //---- DB DETAILS  -------------------------------------------------------------
     $db_host = "localhost";
-    $db_name = "sk-wedding";
+    $db_name = "skWedding";
     $db_username = "root";
     $db_password = "";
 }

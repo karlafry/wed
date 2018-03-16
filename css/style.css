@@ -495,6 +495,11 @@ address {
   margin-bottom: 1.09375rem;
 }
 
+/* line 146, ../sass/_typography.scss */
+small {
+  font-size: 0.7em;
+}
+
 /* Slider */
 /* line 31, ../sass/_slick.scss */
 .slick-slider {
@@ -1946,23 +1951,61 @@ hr {
   margin: 1.75rem 0;
 }
 
+/* line 98, ../sass/style.scss */
+.alert {
+  padding: 14px;
+  padding: 0.875rem;
+  margin-bottom: 14px;
+  margin-bottom: 0.875rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+/* line 105, ../sass/style.scss */
+.alert p {
+  margin-bottom: 0;
+}
+/* line 109, ../sass/style.scss */
+.alert.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+/* line 115, ../sass/style.scss */
+.alert.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+}
+/* line 121, ../sass/style.scss */
+.alert.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b;
+}
+/* line 127, ../sass/style.scss */
+.alert.alert-error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
 /*********** SLIDER *************/
-/* line 99, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 section.slider-container {
   position: relative;
   margin-bottom: 14px;
   margin-bottom: 0.875rem;
 }
-/* line 103, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 section.slider-container .main-banner {
   height: 0;
   padding-bottom: 37.5%;
 }
-/* line 107, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 section.slider-container .main-banner:not(.slick-initialized) {
   overflow: hidden;
 }
-/* line 111, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 section.slider-container .main-banner figure {
   position: relative;
   padding-bottom: 37.5%;
@@ -1976,7 +2019,7 @@ section.slider-container .main-banner figure img {
   left: 0;
   width: 100%;
 }
-/* line 114, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 section.slider-container .main-banner figure:before {
   content: '';
   position: absolute;
@@ -1986,11 +2029,11 @@ section.slider-container .main-banner figure:before {
   background: #f6eadb;
   z-index: -1;
 }
-/* line 124, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 section.slider-container .main-banner figure img {
   opacity: 0.6;
 }
-/* line 128, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 section.slider-container .main-banner figure figcaption {
   padding: 28px;
   padding: 1.75rem;
@@ -2012,7 +2055,7 @@ section.slider-container .main-banner figure figcaption {
   line-height: 7.875rem;
   color: #550202;
 }
-/* line 144, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 section.slider-container .main-banner figure figcaption span {
   font-family: "AutumnInNovember";
   font-size: 65px;
@@ -2020,31 +2063,31 @@ section.slider-container .main-banner figure figcaption span {
   display: inline-block;
 }
 @media (max-width: 75em) {
-  /* line 128, ../sass/style.scss */
+  /* line 164, ../sass/style.scss */
   section.slider-container .main-banner figure figcaption {
     font-size: 60px;
     line-height: 98px;
     line-height: 6.125rem;
   }
-  /* line 154, ../sass/style.scss */
+  /* line 190, ../sass/style.scss */
   section.slider-container .main-banner figure figcaption span {
     font-size: 54px;
   }
 }
 @media (max-width: 61.25em) {
-  /* line 128, ../sass/style.scss */
+  /* line 164, ../sass/style.scss */
   section.slider-container .main-banner figure figcaption {
     font-size: 48px;
     line-height: 70px;
     line-height: 4.375rem;
   }
-  /* line 162, ../sass/style.scss */
+  /* line 198, ../sass/style.scss */
   section.slider-container .main-banner figure figcaption span {
     font-size: 40px;
   }
 }
 @media (max-width: 40em) {
-  /* line 128, ../sass/style.scss */
+  /* line 164, ../sass/style.scss */
   section.slider-container .main-banner figure figcaption {
     padding: 14px;
     padding: 0.875rem;
@@ -2052,17 +2095,17 @@ section.slider-container .main-banner figure figcaption span {
     line-height: 42px;
     line-height: 2.625rem;
   }
-  /* line 172, ../sass/style.scss */
+  /* line 208, ../sass/style.scss */
   section.slider-container .main-banner figure figcaption span {
     font-size: 24px;
   }
 }
-/* line 180, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 section.slider-container .slider-title {
   padding: 0 28px;
   padding: 0 1.75rem;
 }
-/* line 186, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 section.slider-container .carousel div.slick-slide figure {
   position: relative;
   padding-bottom: 100%;
@@ -2078,18 +2121,18 @@ section.slider-container .carousel div.slick-slide figure img {
 }
 
 /************* MAPS ****************/
-/* line 194, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 div.map-container {
   position: relative;
   height: 350px;
 }
 @media (max-width: 47.99em) {
-  /* line 194, ../sass/style.scss */
+  /* line 230, ../sass/style.scss */
   div.map-container {
     height: 250px;
   }
 }
-/* line 202, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 div.map-container > iframe {
   position: absolute !important;
   left: 0;
@@ -2099,12 +2142,12 @@ div.map-container > iframe {
   height: 100%;
 }
 
-/* line 213, ../sass/style.scss */
+/* line 249, ../sass/style.scss */
 #instafeed > div {
   margin-bottom: 2.85714%;
 }
 @media (min-width: 64em) {
-  /* line 213, ../sass/style.scss */
+  /* line 249, ../sass/style.scss */
   #instafeed > div {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2113,13 +2156,13 @@ div.map-container > iframe {
     float: left;
     margin-right: 2.85714%;
   }
-  /* line 218, ../sass/style.scss */
+  /* line 254, ../sass/style.scss */
   #instafeed > div:nth-of-type(4n+4) {
     margin-right: 0;
   }
 }
 @media (max-width: 63.99em) and (min-width: 48.0625em) {
-  /* line 213, ../sass/style.scss */
+  /* line 249, ../sass/style.scss */
   #instafeed > div {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2128,14 +2171,14 @@ div.map-container > iframe {
     float: left;
     margin-right: 2.85714%;
   }
-  /* line 226, ../sass/style.scss */
+  /* line 262, ../sass/style.scss */
   #instafeed > div:nth-of-type(3n+3) {
     margin-right: 0;
   }
 }
 
 @media (max-width: 47.99em) and (min-width: 30em) {
-  /* line 213, ../sass/style.scss */
+  /* line 249, ../sass/style.scss */
   #instafeed > div {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2144,14 +2187,14 @@ div.map-container > iframe {
     float: left;
     margin-right: 2.85714%;
   }
-  /* line 234, ../sass/style.scss */
+  /* line 270, ../sass/style.scss */
   #instafeed > div:nth-of-type(even) {
     margin-right: 0;
   }
 }
 
 @media (max-width: 30em) {
-  /* line 213, ../sass/style.scss */
+  /* line 249, ../sass/style.scss */
   #instafeed > div {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -2162,7 +2205,7 @@ div.map-container > iframe {
     margin-right: 0;
   }
 }
-/* line 243, ../sass/style.scss */
+/* line 279, ../sass/style.scss */
 #instafeed > div figure {
   position: relative;
   padding-bottom: 100%;
@@ -2178,7 +2221,7 @@ div.map-container > iframe {
   left: 0;
   width: 100%;
 }
-/* line 248, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 #instafeed > div figure figcaption {
   padding: 14px;
   padding: 0.875rem;
@@ -2193,7 +2236,7 @@ div.map-container > iframe {
   background: rgba(16, 16, 16, 0.6);
   z-index: 2;
 }
-/* line 261, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 #instafeed > div figure figcaption div {
   position: absolute;
   top: 50%;
@@ -2202,7 +2245,7 @@ div.map-container > iframe {
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
-/* line 266, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 #instafeed > div figure figcaption div span {
   font-size: 21px;
   display: block;
@@ -2217,7 +2260,7 @@ div.map-container > iframe {
   content: "";
   margin-right: 10px;
 }
-/* line 274, ../sass/style.scss */
+/* line 310, ../sass/style.scss */
 #instafeed > div figure img {
   bottom: 0;
   margin: auto;
@@ -2227,11 +2270,11 @@ div.map-container > iframe {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 282, ../sass/style.scss */
+/* line 318, ../sass/style.scss */
 #instafeed > div figure:hover figcaption {
   display: block;
 }
-/* line 286, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 #instafeed > div figure:hover img {
   -moz-transform: scale(1.25);
   -ms-transform: scale(1.25);

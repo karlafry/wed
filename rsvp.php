@@ -9,11 +9,14 @@ include ('inc/site_head.inc');
     <div class="main no-banner">
         <div class="row content">
             <div class="inner-wrap">
-                <section class="twelvecol">
-                    <h1>RSVP</h1>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </section>
+                <?php if(isset($_SESSION['nm_username']) && !empty($_SESSION['nm_username'])) : ?>
+                    <section class="twelvecol">
+                        <h1>RSVP</h1>
+                        <p></p>
+                    </section>
+                <?php else:
+                    include 'inc/login-form.inc';
+                endif; ?>
             </div>
         </div>
     </div>
