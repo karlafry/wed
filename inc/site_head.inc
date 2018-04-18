@@ -7,6 +7,8 @@
     <meta name="description" content="<?=$page_desc?>">
     <title><?=$page_title?> | Sean &amp; Karla are getting married | Barnes Wedding 2018</title>
 
+    <link rel="canonical" href="<?= rtrim(strtok($_SERVER["REQUEST_URI"],'?'),"/");?>" />
+
     <!-- CSS and Fonts
     ================================================== -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">

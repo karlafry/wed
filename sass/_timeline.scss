@@ -1,0 +1,220 @@
+.timeline {
+    /*==========  Global  ==========*/
+    $centered-content-width: 1024px;
+    $stem-width: 60px;
+    $stem-line-width: 6px;
+    $stem-default-glow: $primary;
+    $post-stem-padding: 80px;
+    $post-width: ($centered-content-width/2) - $post-stem-padding;
+
+
+    @include clearfix;
+    margin: 0px auto;
+    width: $centered-content-width;
+    padding-top: $stem-width;
+
+    @media only screen {
+        width: auto;
+        max-width: $centered-content-width;
+    }
+
+    &:before {
+        content: '';
+        width: $stem-line-width;
+        height: 100%;
+        margin: 0px auto;
+        background-color: $primary;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 3px);
+    }
+
+    .stem-wrapper {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 50%;
+        @include transition-duration(.2s);
+
+        &.color-pink {
+            .stem-background {
+                background: $accent-pink;
+            }
+        }
+
+        .stem, .stem-background {
+            position: absolute;
+            top: 0px;
+            left: -($stem-line-width / 2);
+            width: $stem-line-width;
+            height: 100%;
+        }
+    }
+
+    /*==========  Post wrapper ==========*/
+
+    .post-wrapper {
+
+        .post {
+            position: relative;
+            width: $post-width;
+            @include rem(padding-bottom, rhythm(1.5));
+            clear: both;
+            opacity: 1;
+            @include perspective(1000px);
+
+            &.hidden .post-content {
+                @include transform(translateY(100px) rotateX(30deg));
+                opacity: 0;
+            }
+
+            &:hover .post-content, &.active .post-content {
+                opacity: 1;
+            }
+
+            &:nth-child(even) {
+                float: right;
+            }
+            &:nth-child(odd) {
+                float: left;
+            }
+
+            &:nth-child(even) .stem-overlay {
+                left: -110px;
+            }
+            &:nth-child(odd) .stem-overlay {
+                right: -110px;
+            }
+
+            .stem-overlay {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                width: $stem-width;
+
+                .icon {
+                    @include transition-duration(0.2s);
+                    @include transition-property('background-color','width','height');
+                    background-color: $primary;
+                    border-radius: 100%;
+                    height: $stem-width/2;
+                    width: $stem-width/2;
+                    cursor: pointer;
+                    margin-left: $stem-width/4;
+                }
+            }
+
+            &.active {
+                &.church-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/church.svg');
+                }
+
+                &.ceremony-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/ceremony.svg');
+                }
+
+                &.photos-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/photos.svg');
+                }
+
+                &.receiving-line-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/receiving-line.svg');
+                }
+
+                &.speeches-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/speeches.svg');
+                }
+
+                &.evening-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/evening.svg');
+                }
+
+                &.cake-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/cake.svg');
+                }
+
+                &.carriages-icon .stem-overlay .icon {
+                    background-image: url('../images/icons/carriages.svg');
+                }
+
+                .stem-overlay .icon {
+                    background-color: white;
+                    border: 2px solid $accent-pink;
+                    background-size: contain;
+                    height: $stem-width;
+                    width: $stem-width;
+                    border-radius: 0;
+                    margin: 0;
+                }
+            }
+
+            .post-content {
+                opacity: .3;
+                @include transition-duration(.4s);
+                @include transform(none);
+
+                h3 {
+                    @include rem(margin-bottom, rhythm(0.25));
+                }
+            }
+        }
+
+    }
+
+    /*==========  Media queries  ==========*/
+
+    @media only screen and (max-width: 1100px) {
+        max-width: none;
+
+        &:before {
+            float: left;
+            left: 50px;
+
+        }
+
+        .stem-wrapper {
+            left: 52px;
+        }
+
+        .post-wrapper .post {
+
+            // To add extra weight to the selector
+            &, &:nth-child(even), &:nth-child(odd) {
+                width: auto;
+                margin-left: 82px;
+                float: none;
+
+                .stem-overlay {
+                    left: -60px;
+                    right: auto;
+                }
+            }
+
+            .post-content {
+                padding: 0px 25px;
+            }
+
+        }
+
+    }
+
+    @media only screen and (max-width: 768px) {
+
+        &:before {
+            left: 30px;
+        }
+
+        .post-wrapper .post {
+            margin-left: 62px !important;
+
+            .post-content {
+                padding: 0 25px;
+            }
+        }
+
+        .stem-wrapper {
+            left: 32px;
+        }
+
+    }
+}

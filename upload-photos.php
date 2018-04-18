@@ -28,7 +28,7 @@ include ('inc/site_head.inc');
 
         });
     </script>
-<? endif; ?>
+<?php endif; ?>
 
 <?php
 include ('inc/site_foot.inc');

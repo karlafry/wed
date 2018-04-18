@@ -6,6 +6,7 @@ header.header {
 
     @include media(">=tablet-gt") {
         @include rem(padding, 0 rhythm(0.5));
+        height: 56px;
 
         &.solid-colour {
             background-color: $white;

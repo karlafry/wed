@@ -72,6 +72,35 @@
                 @include rem(padding,rhythm(0.25));
                 text-decoration: none;
                 color: $primary;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            @include media(">=tablet-gt") {
+                &.rsvp a {
+                    color: $copy;
+                    background-color: $primary;
+                    @include transition(.2s ease-in-out);
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -16px;
+                        width: 0;
+                        height: 0;
+                        border-left: 25px solid $primary;
+                        border-bottom: 16px solid transparent;
+                        border-right: 25px solid $primary;
+                    }
+
+                    &:hover {
+                        text-decoration: none;
+                        @include rem(padding-bottom,rhythm(0.75));
+                    }
+                }
             }
         }
     }

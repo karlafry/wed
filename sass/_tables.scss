@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+
+    th,td {
+        @include rem(padding, 8px rhythm(0.25));
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    th {
+        font-weight: bold;
+        background: $primary;
+        color: $white;
+        font-size: $zeta;
+    }
+
+    td {
+        background: $light_grey;
+        border-bottom: 2px solid $white;
+        color: $black;
+
+        a {
+            color: $primary;
+        }
+    }
+
+    tr:nth-of-type(even) td {
+        background: $white;
+    }
+}

@@ -30,23 +30,129 @@
                 <h1>The big day</h1>
 
                 <h2>Order of day</h2>
-                <ul>
-                    <li><span>12:30pm</span> Arrive at church</li>
-                    <li><span>1pm</span> Ceremony</li>
-                    <li><span>3:30pm</span> Welcome drinks at New Place Hotel and photographs</li>
-                    <li><span>4:30pm</span> Wedding breakfast and speeches</li>
-                    <li><span>7:30pm</span> Evening Reception</li>
-                    <li><span>8:30pm</span> Cutting cake and first dance</li>
-                    <li><span>12:30am</span> Carriages</li>
-                </ul>
 
-            </section>
-            <section class="twelvecol">
+                <div class="timeline">
+                    <div class="stem-wrapper">
+                        <div class="stem"></div>
+                        <div class="stem-background"></div>
+                    </div>
 
+                    <div class="post-wrapper">
+                        <article class="post church-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>12:30 - 12:45pm</h3>
+                                <div class="entry-content">
+                                    <p>Arrive at St Stephen's church</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post ceremony-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>1:00pm</h3>
+                                <div class="entry-content">
+                                    <p>
+                                        Ceremony
+                                        <br>
+                                        <small>While we welcome you to take photos, we kindly ask that you do not obstruct the photographer</small>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post photos-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>3:00pm</h3>
+                                <div class="entry-content">
+                                    <p>Welcome drinks at New Place Hotel and photographs</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post receiving-line-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>4:30pm</h3>
+                                <div class="entry-content">
+                                    <p>Receiving line</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post speeches-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>5:00pm</h3>
+                                <div class="entry-content">
+                                    <p>Wedding breakfast and speeches</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post evening-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>7:30pm</h3>
+                                <div class="entry-content">
+                                    <p>Evening reception</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="post cake-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>8:15pm</h3>
+                                <div class="entry-content">
+                                    <p>Cutting of the cake followed by first dance</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post carriages-icon">
+                            <div class="stem-overlay">
+                                <div class="icon"></div>
+                            </div>
+
+                            <div class="post-content">
+                                <h3>12:30am</h3>
+                                <div class="entry-content">
+                                    <p>Carriages</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div> <!-- post-wrapper -->
+                </div>
+
+                <p>Confetti will be provided on the day so no need to bring your own.</p>
             </section>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="js/timeline.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         jQuery('.main-banner').slick({

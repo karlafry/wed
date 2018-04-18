@@ -13,8 +13,8 @@ if(strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP
     //---- DB DETAILS  -------------------------------------------------------------
     $db_host = "localhost";
     $db_name = "skWedding";
-    $db_username = "root";
-    $db_password = "";
+    $db_username = "sk_wedding";
+    $db_password = "SGakF!3HCp9$";
 }
 elseif(strpos($_SERVER['HTTP_HOST'], 'karlafry.co.uk') !== false)
 {
@@ -26,8 +26,8 @@ elseif(strpos($_SERVER['HTTP_HOST'], 'karlafry.co.uk') !== false)
     error_reporting(0);
 
     //----- DB DETAILS  -------------------------------------------------------------
-    $db_host = "213.171.200.92";
-    $db_name = "skWedding";
+    $db_host = "213.171.200.80";
+    $db_name = "skWeddingTest";
     $db_username = "sk_wedding";
     $db_password = "SGakF!3HCp9$";
 
@@ -67,6 +67,7 @@ if(!DEV_MODE)
 
 define('STATIC_HOME', $static_home);
 define('SITE_HOME', $site_home);
+define('SITE_HOME_ADMIN', $site_home.'admin/');
 define('ABSOLUTE_PATH', $absolute_path);
 define('DBHOST', $db_host);
 define('DBUSER', $db_username);

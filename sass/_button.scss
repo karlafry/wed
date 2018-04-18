@@ -30,7 +30,14 @@
 .btn,
 input[type="submit"] {
     @extend %button;
-    width: auto;
-    display: block;
-    margin: auto;
+
+    @include media(">phone") {
+        width: auto;
+    }
+}
+
+@include media("<=phone") {
+    button.btn {
+        width: 100%;
+    }
 }

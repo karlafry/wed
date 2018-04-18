@@ -11,7 +11,7 @@
                     <li><a href="<?=SITE_HOME?>gifts.php">Gifts</a></li>
                     <li><a href="<?=SITE_HOME?>photos.php">Photos</a></li>
                     <li><a href="<?=SITE_HOME?>contact.php">Contact</a></li>
-                    <li><a href="<?=SITE_HOME?>rsvp.php">RSVP</a></li>
+                    <li class="rsvp"><a href="<?=SITE_HOME?>rsvp.php">RSVP</a></li>
                 </ul>
             </nav>
         </div>

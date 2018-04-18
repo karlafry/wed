@@ -1,31 +1,48 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: karla
- * Date: 28/01/2018
- * Time: 16:33
- */
-class Database
+class Database extends \mysqli
 {
-    private static $db;
     private $connection;
+    private static $instance;
 
-    private function __construct() {
-        $this->connection = new MySQLi(DBHOST, DBUSER, DBPASS, DBNAME);
+    public function __construct() {
+        $this->connection = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME, null, null);
         $this->connection->set_charset('utf8');
+
+        // Error handling
+        if(mysqli_connect_error()) {
+            trigger_error("Failed to connect to Database: " . mysqli_connect_error(),
+                E_USER_ERROR);
+        }
+    }
+
+    /*
+	* Get an instance of the Database
+	* @return Instance
+	*/
+    public static function instance() {
+        if(!self::$instance) { // If no instance then make one
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    /*
+     *  Get mysqli connection
+     * @return connection
+     */
+    public function getConnection() {
+        return $this->connection;
+    }
+
+    public static function db() {
+        return self::instance()->getConnection();
     }
 
     function __destruct() {
         $this->connection->close();
     }
 
-    public static function getConnection() {
-        if (self::$db == null) {
-            self::$db = new Database();
-        }
-        return self::$db->connection;
-    }
 
     public static function sqlFromFilters(\stdClass $filters = null, $where = true)
     {
@@ -57,8 +74,8 @@ class Database
                     continue;
                 }
 
-                $column = str_replace('.', '�', $column);
-                $str = '`'.str_replace('�', '`.`', $column).'` ';
+                $column = str_replace('.', '¦', $column);
+                $str = '`'.str_replace('¦', '`.`', $column).'` ';
 
                 if (is_array($value)) {
                     $value = array_unique($value);
@@ -96,5 +113,42 @@ class Database
         }
 
         return $sql;
+    }
+
+    public static function fetchAssoc($stmt)
+    {
+        $stmt->store_result();
+        if($stmt->num_rows > 0)
+        {
+            $result = array();
+            $md = $stmt->result_metadata();
+            $params = array();
+            while($field = $md->fetch_field()) {
+                $params[] = &$result[$field->name];
+            }
+            call_user_func_array(array($stmt, 'bind_result'), $params);
+            if($stmt->fetch())
+                return $result;
+        }
+
+        return null;
+    }
+
+    public static function fetchObject($stmt)
+    {
+        $array = self::fetchAssoc($stmt);
+
+        if($array) {
+            return (object) $array;
+        }
+        return null;
+    }
+
+    public static function showSql($sql,$params)
+    {
+        for ($i=0; $i<count($params); $i++) {
+            $sql = preg_replace('/\?/',$params[$i],$sql,1);
+        }
+        return '<pre>'.$sql.'</pre>';
     }
 }

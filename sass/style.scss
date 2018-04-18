@@ -131,6 +131,32 @@ hr {
     }
 }
 
+.collapsible {
+    @include rem(margin-bottom, rhythm(1));
+
+    h4 {
+        @include icon-after("\f078", $delta, $primary);
+        @include adjust-font-size-to($epsilon);
+        @include rem(margin-bottom, rhythm(1));
+        cursor: pointer;
+        border-bottom: 2px solid $primary;
+        @include rem(padding, 0 rhythm(0.75) rhythm(0.25) 0);
+
+
+        &:after {
+            float: right;
+        }
+
+        &.open:after {
+            content: '\f077';
+        }
+    }
+
+    .expandable-content {
+        display: none;
+    }
+}
+
 /*********** SLIDER *************/
 section.slider-container {
     position: relative;
@@ -226,7 +252,7 @@ section.slider-container {
     }
 }
 
-/************* MAPS ****************/
+/************* VENUE PAGE ****************/
 div.map-container {
     position: relative;
     height: 350px;
@@ -245,6 +271,7 @@ div.map-container {
     }
 }
 
+/************* PHOTOS PAGE *************/
 #instafeed {
     > div {
         margin-bottom: gutters();
@@ -322,6 +349,103 @@ div.map-container {
                 img {
                     @include transform(scale(1.25));
                 }
+            }
+        }
+    }
+}
+
+/************* WHERE TO STAY PAGE ***********/
+div.alt-accoms {
+    #map {
+        width: 100%;
+        height: 320px;
+        @include rem(margin-bottom, rhythm(0.5));
+    }
+
+    @include media(">desktop-smaller") {
+        position: relative;
+
+        .map-result-container.sticky {
+            position: fixed;
+            width: span(5.7);
+
+            + .map-results {
+                float: right;
+            }
+        }
+    }
+
+    .result-element {
+        @include span(6 (gutters: 2));
+        margin-bottom: gutter(6);
+
+        @include media("<=phone-ls") {
+            @include span(12);
+        }
+
+        &:nth-of-type(even) {
+            margin-right: 0;
+        }
+
+        figure {
+            @include aspect-ratio-img(16,9);
+        }
+
+        .accom-info {
+            @include rem(padding, rhythm(0.5));
+            @include rem(margin, rhythm(-0.75) auto 0);
+            @include transition(width .1s);
+            overflow: hidden;
+            width: calc(100% - 24px);
+            position: relative;
+            background: $white;
+            color: $black;
+
+            h3 {
+                color: $black;
+                @include rem(margin-bottom, rhythm(0.25));
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &.highlight {
+            border: 2px solid $accent-pink;
+
+            .accom-info {
+                width: 100%;
+            }
+        }
+    }
+}
+
+/*********** BIG DAY PAGE *************/
+.timeline {
+    @include rem(margin-bottom, rhythm(1));
+    position: relative;
+}
+
+/************* RSVP FORM **************/
+form.rsvpForm {
+    .rsvp-on-behalf {
+        @include rem(margin, rhythm(1) 0);
+
+        span#rsvp-on-behalf-trigger {
+            @include icon-before('\f055',$delta,$accent-pink);
+            background: transparent;
+            border-color: $accent-pink;
+            color: $accent-pink;
+
+            &:before {
+                vertical-align: text-bottom;
+            }
+
+            &:hover {
+                background-color: $white;
+                color: $accent-pink;
+                text-decoration: none;
             }
         }
     }

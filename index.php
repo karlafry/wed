@@ -61,7 +61,7 @@
 
     <div class="row">
         <section class="twelvecol slider-container">
-            <div class="slider-title">
+            <div class="slider-title inner-wrap">
                 <h2>Over the years&hellip;</h2>
             </div>
             <div class="carousel">
@@ -84,6 +84,7 @@
     </div>
 </div>
 
+<script type="text/javascript" src="bower_components/flipclock/compiled/flipclock.min.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         jQuery('.main-banner').slick({

@@ -71,7 +71,7 @@
     color: $black;
     padding: 6px;
     border: none;
-    border-bottom: 2px solid;
+    border: 1px solid $light-grey;
     outline: none;
     border-radius: 0;
     @include rem(margin-bottom, rhythm(0.5));

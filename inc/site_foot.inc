@@ -6,7 +6,6 @@
 <script src="<?= SITE_HOME;?>js/modernizr.js"></script>
 <script type="text/javascript" src="<?= SITE_HOME;?>js/slick.min.js"></script>
 <script type="text/javascript" src="<?= SITE_HOME;?>bower_components/jquery.togglebutton.min/index.js"></script>
-<script type="text/javascript" src="<?= SITE_HOME;?>bower_components/flipclock/compiled/flipclock.min.js"></script>
 
 <script>
     Modernizr.load([

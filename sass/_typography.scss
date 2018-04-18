@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'liebeerika_regularregular';
+    font-family: 'erika';
     src: url('../fonts/liebeerika-regular-webfont.woff2') format('woff2'),
     url('../fonts/liebeerika-regular-webfont.woff') format('woff'),
     url('../fonts/liebeerika-regular-webfont.ttf') format('truetype');
@@ -29,7 +29,7 @@
 
 $banner-font-family: 'springTime';
 $banner-alt-font-family: 'AutumnInNovember';
-$header-font-family: 'liebeerika_regularregular';
+$header-font-family: 'erika';
 $font-family: 'Karla', sans-serif;
 
 $base-font-size: 16px;
@@ -97,6 +97,11 @@ h3 {
     font-family: $header-font-family;
 }
 
+h4 {
+    @include adjust-font-size-to($epsilon);
+    font-weight: bold;
+}
+
 a, a:visited {
     text-decoration: none;
     color: $accent-pink;
@@ -118,6 +123,14 @@ a, a:visited {
 p, li {
     @include font-smoothing;
     @include margin-trailer;
+}
+
+strong,b {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
 }
 
 sup,

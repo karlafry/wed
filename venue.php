@@ -47,7 +47,7 @@ include ('inc/site_head.inc');
             <section class="twelvecol">
                 <h2>Reception</h2>
                 <div class="sixcol">
-                    <p>The reception will be held at New Place Hotel from 3:30pm. Parking is ample and the hotel is happy for cars to be left overnight and collected the next day.</p>
+                    <p>The reception will be held at New Place Hotel from 3pm. Parking is ample and the hotel is happy for cars to be left overnight and collected the next day.</p>
 
                     <address>
                         New Place Hotel<br>
@@ -67,10 +67,12 @@ include ('inc/site_head.inc');
                 <h2>Provided transport</h2>
                 <div class="sixcol">
                     <p>As parking is limited at the church, we will be providing transport to come from New Place Hotel out to Sparsholt and back again. Please do make use of this if you are coming from around that area and let us know when you RSVP. The transport does allow children, though does not have seatbelts.</p>
+                    <p>The hotel is happy for guests to arrive in the morning, leaving their cars for the duration of the wedding (as well as overnight).</p>
                 </div>
                 <div class="sixcol last">
                     <img src="images/bus.jpg" alt="Wedding bus" >
                 </div>
+                <br>
             </section>
 
             <section class="twelvecol">
@@ -84,13 +86,6 @@ include ('inc/site_head.inc');
     </div>
 </div>
 
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.main-banner').slick({
-            arrows: false
-        });
-    });
-</script>
 <?php
 include ('inc/site_foot.inc');
 ?>
